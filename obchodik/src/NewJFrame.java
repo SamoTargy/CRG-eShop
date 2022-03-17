@@ -15,8 +15,9 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
-        jLabel1.setText("Ahoj Sefe");
+        jLabel1.setText("Ahoj Sefko");
         jLabel2.setText("Aj ja som tu: Ďugi");
+
     }
 
     /**
