@@ -15,9 +15,6 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
-        jLabel1.setText("Ahoj Sefko");
-        jLabel2.setText("Aj ja som tu: Ďugi");
-
     }
 
     /**
@@ -29,46 +26,220 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        pozadiePanel = new javax.swing.JPanel();
+        panelLavyPanel = new javax.swing.JPanel();
+        ShopLabel = new javax.swing.JLabel();
+        domovPanel = new javax.swing.JPanel();
+        domovLabel = new javax.swing.JLabel();
+        produktyPanel = new javax.swing.JPanel();
+        produktyLabel = new javax.swing.JLabel();
+        kontaktyPanel = new javax.swing.JPanel();
+        kontaktyLabel = new javax.swing.JLabel();
+        ucetPanel = new javax.swing.JPanel();
+        ucetLabel = new javax.swing.JLabel();
+        kosikPanel = new javax.swing.JPanel();
+        kosikLabel = new javax.swing.JLabel();
+        koniecButton = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setUndecorated(true);
 
-        jButton1.setText("jButton1");
+        panelLavyPanel.setBackground(new java.awt.Color(30, 144, 255));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ShopLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        ShopLabel.setText("Targos´s shop");
+
+        domovPanel.setBackground(new java.awt.Color(40, 130, 255));
+
+        domovLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        domovLabel.setText("DOMOV");
+        domovLabel.setToolTipText("");
+
+        javax.swing.GroupLayout domovPanelLayout = new javax.swing.GroupLayout(domovPanel);
+        domovPanel.setLayout(domovPanelLayout);
+        domovPanelLayout.setHorizontalGroup(
+            domovPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, domovPanelLayout.createSequentialGroup()
+                .addGap(0, 64, Short.MAX_VALUE)
+                .addComponent(domovLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        domovPanelLayout.setVerticalGroup(
+            domovPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(domovLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+
+        produktyPanel.setBackground(new java.awt.Color(40, 130, 255));
+
+        produktyLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        produktyLabel.setText("PRODUKTY");
+        produktyLabel.setToolTipText("");
+
+        javax.swing.GroupLayout produktyPanelLayout = new javax.swing.GroupLayout(produktyPanel);
+        produktyPanel.setLayout(produktyPanelLayout);
+        produktyPanelLayout.setHorizontalGroup(
+            produktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, produktyPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(produktyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        produktyPanelLayout.setVerticalGroup(
+            produktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(produktyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+
+        kontaktyPanel.setBackground(new java.awt.Color(40, 130, 255));
+
+        kontaktyLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        kontaktyLabel.setText("KONTAKTY");
+        kontaktyLabel.setToolTipText("");
+
+        javax.swing.GroupLayout kontaktyPanelLayout = new javax.swing.GroupLayout(kontaktyPanel);
+        kontaktyPanel.setLayout(kontaktyPanelLayout);
+        kontaktyPanelLayout.setHorizontalGroup(
+            kontaktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kontaktyPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(kontaktyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        kontaktyPanelLayout.setVerticalGroup(
+            kontaktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(kontaktyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+
+        ucetPanel.setBackground(new java.awt.Color(40, 130, 255));
+
+        ucetLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        ucetLabel.setText("ÚČET");
+        ucetLabel.setToolTipText("");
+
+        javax.swing.GroupLayout ucetPanelLayout = new javax.swing.GroupLayout(ucetPanel);
+        ucetPanel.setLayout(ucetPanelLayout);
+        ucetPanelLayout.setHorizontalGroup(
+            ucetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ucetPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ucetLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        ucetPanelLayout.setVerticalGroup(
+            ucetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(ucetLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+
+        kosikPanel.setBackground(new java.awt.Color(40, 130, 255));
+
+        kosikLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        kosikLabel.setText("KOŠÍK");
+        kosikLabel.setToolTipText("");
+
+        javax.swing.GroupLayout kosikPanelLayout = new javax.swing.GroupLayout(kosikPanel);
+        kosikPanel.setLayout(kosikPanelLayout);
+        kosikPanelLayout.setHorizontalGroup(
+            kosikPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kosikPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(kosikLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        kosikPanelLayout.setVerticalGroup(
+            kosikPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(kosikLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+        );
+
+        koniecButton.setBackground(new java.awt.Color(40, 130, 255));
+        koniecButton.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        koniecButton.setText("Koniec");
+        koniecButton.setToolTipText("");
+        koniecButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                koniecButtonActionPerformed(evt);
+            }
+        });
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout panelLavyPanelLayout = new javax.swing.GroupLayout(panelLavyPanel);
+        panelLavyPanel.setLayout(panelLavyPanelLayout);
+        panelLavyPanelLayout.setHorizontalGroup(
+            panelLavyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(produktyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(domovPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ucetPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(kosikPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(kontaktyPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelLavyPanelLayout.createSequentialGroup()
+                .addGroup(panelLavyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelLavyPanelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(ShopLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelLavyPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(panelLavyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLavyPanelLayout.createSequentialGroup()
+                                .addComponent(koniecButton)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jSeparator1))))
+                .addContainerGap())
+        );
+        panelLavyPanelLayout.setVerticalGroup(
+            panelLavyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLavyPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ShopLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(domovPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(produktyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(kontaktyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ucetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(kosikPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86)
+                .addComponent(koniecButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pozadiePanelLayout = new javax.swing.GroupLayout(pozadiePanel);
+        pozadiePanel.setLayout(pozadiePanelLayout);
+        pozadiePanelLayout.setHorizontalGroup(
+            pozadiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pozadiePanelLayout.createSequentialGroup()
+                .addComponent(panelLavyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(863, Short.MAX_VALUE))
+        );
+        pozadiePanelLayout.setVerticalGroup(
+            pozadiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelLavyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(254, 254, 254)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addComponent(pozadiePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
-                .addComponent(jButton1)
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addComponent(pozadiePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void koniecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_koniecButtonActionPerformed
+
+        System.exit(0);
+        
+    }//GEN-LAST:event_koniecButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,8 +277,26 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel ShopLabel;
+    private javax.swing.JLabel domovLabel;
+    private javax.swing.JPanel domovPanel;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton koniecButton;
+    private javax.swing.JLabel kontaktyLabel;
+    private javax.swing.JPanel kontaktyPanel;
+    private javax.swing.JLabel kosikLabel;
+    private javax.swing.JPanel kosikPanel;
+    private javax.swing.JPanel panelLavyPanel;
+    private javax.swing.JPanel pozadiePanel;
+    private javax.swing.JLabel produktyLabel;
+    private javax.swing.JPanel produktyPanel;
+    private javax.swing.JLabel ucetLabel;
+    private javax.swing.JPanel ucetPanel;
     // End of variables declaration//GEN-END:variables
 }
