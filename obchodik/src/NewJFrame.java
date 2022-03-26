@@ -29,6 +29,7 @@ public class NewJFrame extends javax.swing.JFrame {
         pozadiePanel = new javax.swing.JPanel();
         panelLavyPanel = new javax.swing.JPanel();
         ShopLabel = new javax.swing.JLabel();
+        ShopSeparator = new javax.swing.JSeparator();
         domovPanel = new javax.swing.JPanel();
         domovLabel = new javax.swing.JLabel();
         produktyPanel = new javax.swing.JPanel();
@@ -40,7 +41,20 @@ public class NewJFrame extends javax.swing.JFrame {
         kosikPanel = new javax.swing.JPanel();
         kosikLabel = new javax.swing.JLabel();
         koniecButton = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
+        ProduktyScrollPane = new javax.swing.JScrollPane();
+        PanellSProduktmiPanel = new javax.swing.JPanel();
+        Produkt1Panel = new javax.swing.JPanel();
+        Produkt2Panel = new javax.swing.JPanel();
+        Produkt3Panel = new javax.swing.JPanel();
+        Produkt4Panel = new javax.swing.JPanel();
+        Produkt5Panel = new javax.swing.JPanel();
+        Produkt6Panel = new javax.swing.JPanel();
+        Produkt7Panel = new javax.swing.JPanel();
+        Produkt8Panel = new javax.swing.JPanel();
+        Produkt9Panel = new javax.swing.JPanel();
+        Produkt10Panel = new javax.swing.JPanel();
+        Produkt11Panel = new javax.swing.JPanel();
+        Produkt12Panel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -49,7 +63,11 @@ public class NewJFrame extends javax.swing.JFrame {
         panelLavyPanel.setBackground(new java.awt.Color(30, 144, 255));
 
         ShopLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        ShopLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ShopLabel.setText("Targos´s shop");
+
+        ShopSeparator.setBackground(new java.awt.Color(0, 0, 0));
+        ShopSeparator.setForeground(new java.awt.Color(0, 0, 0));
 
         domovPanel.setBackground(new java.awt.Color(40, 130, 255));
 
@@ -62,7 +80,7 @@ public class NewJFrame extends javax.swing.JFrame {
         domovPanelLayout.setHorizontalGroup(
             domovPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, domovPanelLayout.createSequentialGroup()
-                .addGap(0, 64, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(domovLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         domovPanelLayout.setVerticalGroup(
@@ -81,7 +99,7 @@ public class NewJFrame extends javax.swing.JFrame {
         produktyPanelLayout.setHorizontalGroup(
             produktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, produktyPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 64, Short.MAX_VALUE)
                 .addComponent(produktyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         produktyPanelLayout.setVerticalGroup(
@@ -146,18 +164,16 @@ public class NewJFrame extends javax.swing.JFrame {
             .addComponent(kosikLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
         );
 
-        koniecButton.setBackground(new java.awt.Color(40, 130, 255));
-        koniecButton.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        koniecButton.setBackground(new java.awt.Color(30, 144, 255));
+        koniecButton.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
         koniecButton.setText("Koniec");
         koniecButton.setToolTipText("");
+        koniecButton.setBorder(null);
         koniecButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 koniecButtonActionPerformed(evt);
             }
         });
-
-        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
-        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout panelLavyPanelLayout = new javax.swing.GroupLayout(panelLavyPanel);
         panelLavyPanel.setLayout(panelLavyPanelLayout);
@@ -169,17 +185,13 @@ public class NewJFrame extends javax.swing.JFrame {
             .addComponent(kosikPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(kontaktyPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panelLavyPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelLavyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ShopSeparator)
                     .addGroup(panelLavyPanelLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(ShopLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelLavyPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panelLavyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelLavyPanelLayout.createSequentialGroup()
-                                .addComponent(koniecButton)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jSeparator1))))
+                        .addComponent(koniecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(ShopLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panelLavyPanelLayout.setVerticalGroup(
@@ -188,7 +200,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(ShopLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ShopSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(domovPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -199,10 +211,224 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(ucetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(kosikPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86)
-                .addComponent(koniecButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addComponent(koniecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
+
+        ProduktyScrollPane.setBorder(null);
+        ProduktyScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        ProduktyScrollPane.setToolTipText("");
+        ProduktyScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        Produkt1Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt1PanelLayout = new javax.swing.GroupLayout(Produkt1Panel);
+        Produkt1Panel.setLayout(Produkt1PanelLayout);
+        Produkt1PanelLayout.setHorizontalGroup(
+            Produkt1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt1PanelLayout.setVerticalGroup(
+            Produkt1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 250, Short.MAX_VALUE)
+        );
+
+        Produkt2Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt2PanelLayout = new javax.swing.GroupLayout(Produkt2Panel);
+        Produkt2Panel.setLayout(Produkt2PanelLayout);
+        Produkt2PanelLayout.setHorizontalGroup(
+            Produkt2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt2PanelLayout.setVerticalGroup(
+            Produkt2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 250, Short.MAX_VALUE)
+        );
+
+        Produkt3Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt3PanelLayout = new javax.swing.GroupLayout(Produkt3Panel);
+        Produkt3Panel.setLayout(Produkt3PanelLayout);
+        Produkt3PanelLayout.setHorizontalGroup(
+            Produkt3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt3PanelLayout.setVerticalGroup(
+            Produkt3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 250, Short.MAX_VALUE)
+        );
+
+        Produkt4Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt4PanelLayout = new javax.swing.GroupLayout(Produkt4Panel);
+        Produkt4Panel.setLayout(Produkt4PanelLayout);
+        Produkt4PanelLayout.setHorizontalGroup(
+            Produkt4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt4PanelLayout.setVerticalGroup(
+            Produkt4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 250, Short.MAX_VALUE)
+        );
+
+        Produkt5Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt5PanelLayout = new javax.swing.GroupLayout(Produkt5Panel);
+        Produkt5Panel.setLayout(Produkt5PanelLayout);
+        Produkt5PanelLayout.setHorizontalGroup(
+            Produkt5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt5PanelLayout.setVerticalGroup(
+            Produkt5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 250, Short.MAX_VALUE)
+        );
+
+        Produkt6Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt6PanelLayout = new javax.swing.GroupLayout(Produkt6Panel);
+        Produkt6Panel.setLayout(Produkt6PanelLayout);
+        Produkt6PanelLayout.setHorizontalGroup(
+            Produkt6PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt6PanelLayout.setVerticalGroup(
+            Produkt6PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        Produkt7Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt7PanelLayout = new javax.swing.GroupLayout(Produkt7Panel);
+        Produkt7Panel.setLayout(Produkt7PanelLayout);
+        Produkt7PanelLayout.setHorizontalGroup(
+            Produkt7PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt7PanelLayout.setVerticalGroup(
+            Produkt7PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 250, Short.MAX_VALUE)
+        );
+
+        Produkt8Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt8PanelLayout = new javax.swing.GroupLayout(Produkt8Panel);
+        Produkt8Panel.setLayout(Produkt8PanelLayout);
+        Produkt8PanelLayout.setHorizontalGroup(
+            Produkt8PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt8PanelLayout.setVerticalGroup(
+            Produkt8PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        Produkt9Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt9PanelLayout = new javax.swing.GroupLayout(Produkt9Panel);
+        Produkt9Panel.setLayout(Produkt9PanelLayout);
+        Produkt9PanelLayout.setHorizontalGroup(
+            Produkt9PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt9PanelLayout.setVerticalGroup(
+            Produkt9PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        Produkt10Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt10PanelLayout = new javax.swing.GroupLayout(Produkt10Panel);
+        Produkt10Panel.setLayout(Produkt10PanelLayout);
+        Produkt10PanelLayout.setHorizontalGroup(
+            Produkt10PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt10PanelLayout.setVerticalGroup(
+            Produkt10PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        Produkt11Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt11PanelLayout = new javax.swing.GroupLayout(Produkt11Panel);
+        Produkt11Panel.setLayout(Produkt11PanelLayout);
+        Produkt11PanelLayout.setHorizontalGroup(
+            Produkt11PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        Produkt11PanelLayout.setVerticalGroup(
+            Produkt11PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        Produkt12Panel.setBackground(new java.awt.Color(205, 205, 205));
+
+        javax.swing.GroupLayout Produkt12PanelLayout = new javax.swing.GroupLayout(Produkt12Panel);
+        Produkt12Panel.setLayout(Produkt12PanelLayout);
+        Produkt12PanelLayout.setHorizontalGroup(
+            Produkt12PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        Produkt12PanelLayout.setVerticalGroup(
+            Produkt12PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 250, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout PanellSProduktmiPanelLayout = new javax.swing.GroupLayout(PanellSProduktmiPanel);
+        PanellSProduktmiPanel.setLayout(PanellSProduktmiPanelLayout);
+        PanellSProduktmiPanelLayout.setHorizontalGroup(
+            PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanellSProduktmiPanelLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Produkt1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt5Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt9Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Produkt10Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt6Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(Produkt11Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Produkt3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Produkt7Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(45, 45, 45)
+                .addGroup(PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Produkt4Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt8Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt12Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30))
+        );
+        PanellSProduktmiPanelLayout.setVerticalGroup(
+            PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanellSProduktmiPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Produkt2Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt4Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt3Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Produkt1Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Produkt5Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Produkt7Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Produkt6Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Produkt8Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addGroup(PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(Produkt10Panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Produkt11Panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Produkt12Panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Produkt9Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        ProduktyScrollPane.setViewportView(PanellSProduktmiPanel);
 
         javax.swing.GroupLayout pozadiePanelLayout = new javax.swing.GroupLayout(pozadiePanel);
         pozadiePanel.setLayout(pozadiePanelLayout);
@@ -210,11 +436,15 @@ public class NewJFrame extends javax.swing.JFrame {
             pozadiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pozadiePanelLayout.createSequentialGroup()
                 .addComponent(panelLavyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(863, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ProduktyScrollPane))
         );
         pozadiePanelLayout.setVerticalGroup(
             pozadiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelLavyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pozadiePanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(ProduktyScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -222,14 +452,12 @@ public class NewJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(pozadiePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(pozadiePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pozadiePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(pozadiePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -277,26 +505,34 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ShopLabel;
-    private javax.swing.JLabel domovLabel;
-    private javax.swing.JPanel domovPanel;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JButton koniecButton;
-    private javax.swing.JLabel kontaktyLabel;
-    private javax.swing.JPanel kontaktyPanel;
-    private javax.swing.JLabel kosikLabel;
-    private javax.swing.JPanel kosikPanel;
-    private javax.swing.JPanel panelLavyPanel;
-    private javax.swing.JPanel pozadiePanel;
-    private javax.swing.JLabel produktyLabel;
-    private javax.swing.JPanel produktyPanel;
-    private javax.swing.JLabel ucetLabel;
-    private javax.swing.JPanel ucetPanel;
+    public javax.swing.JPanel PanellSProduktmiPanel;
+    public javax.swing.JPanel Produkt10Panel;
+    public javax.swing.JPanel Produkt11Panel;
+    public javax.swing.JPanel Produkt12Panel;
+    public javax.swing.JPanel Produkt1Panel;
+    public javax.swing.JPanel Produkt2Panel;
+    public javax.swing.JPanel Produkt3Panel;
+    public javax.swing.JPanel Produkt4Panel;
+    public javax.swing.JPanel Produkt5Panel;
+    public javax.swing.JPanel Produkt6Panel;
+    public javax.swing.JPanel Produkt7Panel;
+    public javax.swing.JPanel Produkt8Panel;
+    public javax.swing.JPanel Produkt9Panel;
+    public javax.swing.JScrollPane ProduktyScrollPane;
+    public javax.swing.JLabel ShopLabel;
+    public javax.swing.JSeparator ShopSeparator;
+    public javax.swing.JLabel domovLabel;
+    public javax.swing.JPanel domovPanel;
+    public javax.swing.JButton koniecButton;
+    public javax.swing.JLabel kontaktyLabel;
+    public javax.swing.JPanel kontaktyPanel;
+    public javax.swing.JLabel kosikLabel;
+    public javax.swing.JPanel kosikPanel;
+    public javax.swing.JPanel panelLavyPanel;
+    public javax.swing.JPanel pozadiePanel;
+    public javax.swing.JLabel produktyLabel;
+    public javax.swing.JPanel produktyPanel;
+    public javax.swing.JLabel ucetLabel;
+    public javax.swing.JPanel ucetPanel;
     // End of variables declaration//GEN-END:variables
 }
