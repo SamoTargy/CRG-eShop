@@ -39,20 +39,21 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         pozadiePanel = new javax.swing.JPanel();
         panelLavyPanel = new javax.swing.JPanel();
         ShopLabel = new javax.swing.JLabel();
         ShopSeparator = new javax.swing.JSeparator();
         domovPanel = new javax.swing.JPanel();
-        domovLabel = new javax.swing.JLabel();
+        bDomov = new javax.swing.JButton();
         produktyPanel = new javax.swing.JPanel();
-        produktyLabel = new javax.swing.JLabel();
+        bProdukty = new javax.swing.JButton();
         kontaktyPanel = new javax.swing.JPanel();
-        kontaktyLabel = new javax.swing.JLabel();
+        bKontakt = new javax.swing.JButton();
         ucetPanel = new javax.swing.JPanel();
-        ucetLabel = new javax.swing.JLabel();
+        bUcet = new javax.swing.JButton();
         kosikPanel = new javax.swing.JPanel();
-        kosikLabel = new javax.swing.JLabel();
+        bKosik = new javax.swing.JButton();
         koniecButton = new javax.swing.JButton();
         ProduktyScrollPane = new javax.swing.JScrollPane();
         PanellSProduktmiPanel = new javax.swing.JPanel();
@@ -105,6 +106,8 @@ public class NewJFrame extends javax.swing.JFrame {
         PopisProduktu12Label = new javax.swing.JLabel();
         Kupit12Button = new javax.swing.JButton();
 
+        jButton1.setText("jButton1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setResizable(false);
@@ -120,97 +123,137 @@ public class NewJFrame extends javax.swing.JFrame {
 
         domovPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        domovLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        domovLabel.setText("DOMOV");
-        domovLabel.setToolTipText("");
+        bDomov.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        bDomov.setText("DOMOV");
+        bDomov.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bDomovActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout domovPanelLayout = new javax.swing.GroupLayout(domovPanel);
         domovPanel.setLayout(domovPanelLayout);
         domovPanelLayout.setHorizontalGroup(
             domovPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, domovPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(domovLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(domovPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bDomov, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
+                .addContainerGap())
         );
         domovPanelLayout.setVerticalGroup(
             domovPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(domovLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+            .addGroup(domovPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bDomov, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         produktyPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        produktyLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        produktyLabel.setText("PRODUKTY");
-        produktyLabel.setToolTipText("");
+        bProdukty.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        bProdukty.setText("PRODUKTY");
+        bProdukty.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bProduktyActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout produktyPanelLayout = new javax.swing.GroupLayout(produktyPanel);
         produktyPanel.setLayout(produktyPanelLayout);
         produktyPanelLayout.setHorizontalGroup(
             produktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, produktyPanelLayout.createSequentialGroup()
-                .addGap(0, 64, Short.MAX_VALUE)
-                .addComponent(produktyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(produktyPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bProdukty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         produktyPanelLayout.setVerticalGroup(
             produktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(produktyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+            .addGroup(produktyPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bProdukty, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         kontaktyPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        kontaktyLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        kontaktyLabel.setText("KONTAKTY");
-        kontaktyLabel.setToolTipText("");
+        bKontakt.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        bKontakt.setText("KONTAKT");
+        bKontakt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bKontaktActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout kontaktyPanelLayout = new javax.swing.GroupLayout(kontaktyPanel);
         kontaktyPanel.setLayout(kontaktyPanelLayout);
         kontaktyPanelLayout.setHorizontalGroup(
             kontaktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kontaktyPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kontaktyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(kontaktyPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bKontakt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         kontaktyPanelLayout.setVerticalGroup(
             kontaktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kontaktyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+            .addGroup(kontaktyPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bKontakt, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         ucetPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        ucetLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        ucetLabel.setText("ÚČET");
-        ucetLabel.setToolTipText("");
+        bUcet.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        bUcet.setText("ÚČET");
+        bUcet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bUcetActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ucetPanelLayout = new javax.swing.GroupLayout(ucetPanel);
         ucetPanel.setLayout(ucetPanelLayout);
         ucetPanelLayout.setHorizontalGroup(
             ucetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ucetPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(ucetLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(ucetPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bUcet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         ucetPanelLayout.setVerticalGroup(
             ucetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ucetLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+            .addGroup(ucetPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bUcet, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         kosikPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        kosikLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        kosikLabel.setText("KOŠÍK");
-        kosikLabel.setToolTipText("");
+        bKosik.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        bKosik.setText("KOŠÍK");
+        bKosik.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bKosikActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout kosikPanelLayout = new javax.swing.GroupLayout(kosikPanel);
         kosikPanel.setLayout(kosikPanelLayout);
         kosikPanelLayout.setHorizontalGroup(
             kosikPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kosikPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(kosikLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(kosikPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bKosik, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         kosikPanelLayout.setVerticalGroup(
             kosikPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kosikLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+            .addGroup(kosikPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bKosik, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         koniecButton.setBackground(new java.awt.Color(30, 144, 255));
@@ -260,7 +303,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(ucetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(kosikPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
                 .addComponent(koniecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -682,7 +725,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(Produkt10Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Produkt2Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Produkt6Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(PanellSProduktmiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(Produkt7Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Produkt3Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -779,6 +822,26 @@ public class NewJFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_Kupit4ButtonActionPerformed
 
+    private void bDomovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDomovActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bDomovActionPerformed
+
+    private void bProduktyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProduktyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bProduktyActionPerformed
+
+    private void bKontaktActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKontaktActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bKontaktActionPerformed
+
+    private void bUcetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUcetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bUcetActionPerformed
+
+    private void bKosikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKosikActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bKosikActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -867,18 +930,19 @@ public class NewJFrame extends javax.swing.JFrame {
     public javax.swing.JScrollPane ProduktyScrollPane;
     public javax.swing.JLabel ShopLabel;
     public javax.swing.JSeparator ShopSeparator;
-    public javax.swing.JLabel domovLabel;
+    public javax.swing.JButton bDomov;
+    public javax.swing.JButton bKontakt;
+    public javax.swing.JButton bKosik;
+    public javax.swing.JButton bProdukty;
+    public javax.swing.JButton bUcet;
     public javax.swing.JPanel domovPanel;
+    public javax.swing.JButton jButton1;
     public javax.swing.JButton koniecButton;
-    public javax.swing.JLabel kontaktyLabel;
     public javax.swing.JPanel kontaktyPanel;
-    public javax.swing.JLabel kosikLabel;
     public javax.swing.JPanel kosikPanel;
     public javax.swing.JPanel panelLavyPanel;
     public javax.swing.JPanel pozadiePanel;
-    public javax.swing.JLabel produktyLabel;
     public javax.swing.JPanel produktyPanel;
-    public javax.swing.JLabel ucetLabel;
     public javax.swing.JPanel ucetPanel;
     // End of variables declaration//GEN-END:variables
 }
