@@ -343,28 +343,28 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="Produkt1Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt5Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt9Panel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="Produkt5Panel" max="32767" attributes="0"/>
+                              <Component id="Produkt9Panel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Produkt1Panel" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="Produkt10Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt2Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt6Panel" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="Produkt10Panel" max="32767" attributes="0"/>
+                              <Component id="Produkt2Panel" max="32767" attributes="0"/>
+                              <Component id="Produkt6Panel" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="46" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="Produkt11Panel" max="32767" attributes="0"/>
+                              <Component id="Produkt7Panel" max="32767" attributes="0"/>
                               <Component id="Produkt3Panel" alignment="1" max="32767" attributes="0"/>
-                              <Component id="Produkt7Panel" alignment="1" max="32767" attributes="0"/>
+                              <Component id="Produkt11Panel" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="Produkt4Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt8Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt12Panel" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="Produkt8Panel" max="32767" attributes="0"/>
+                              <Component id="Produkt12Panel" max="32767" attributes="0"/>
+                              <Component id="Produkt4Panel" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
@@ -374,27 +374,27 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="Produkt2Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt4Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt3Panel" min="-2" max="-2" attributes="0"/>
-                              <Component id="Produkt1Panel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="Produkt5Panel" max="32767" attributes="0"/>
-                              <Component id="Produkt7Panel" max="32767" attributes="0"/>
-                              <Component id="Produkt6Panel" alignment="0" max="32767" attributes="0"/>
-                              <Component id="Produkt8Panel" max="32767" attributes="0"/>
+                              <Component id="Produkt1Panel" max="32767" attributes="0"/>
+                              <Component id="Produkt2Panel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Produkt3Panel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Produkt4Panel" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Produkt6Panel" alignment="1" max="32767" attributes="0"/>
+                              <Component id="Produkt5Panel" alignment="1" max="32767" attributes="0"/>
+                              <Component id="Produkt7Panel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Produkt8Panel" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Produkt9Panel" max="32767" attributes="0"/>
                               <Component id="Produkt10Panel" alignment="0" max="32767" attributes="0"/>
                               <Component id="Produkt11Panel" alignment="0" max="32767" attributes="0"/>
                               <Component id="Produkt12Panel" alignment="0" max="32767" attributes="0"/>
-                              <Component id="Produkt9Panel" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="42" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -410,15 +410,47 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu1Label" pref="176" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu1Label" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit1Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu1Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu1Label" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit1Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu1Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu1Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit1Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt2Panel">
                   <Properties>
@@ -430,15 +462,50 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu2Label" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu2Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit2Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu2Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu2Label" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit2Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu2Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu2Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit2Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit2ButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt3Panel">
                   <Properties>
@@ -450,15 +517,50 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu3Label" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu3Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit3Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu3Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu3Label" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit3Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu3Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu3Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit3Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit3ButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt4Panel">
                   <Properties>
@@ -470,15 +572,50 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu4Label" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu4Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit4Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu4Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu4Label" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit4Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu4Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu4Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit4Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit4ButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt5Panel">
                   <Properties>
@@ -490,15 +627,47 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu5Label" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu5Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit5Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu5Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu5Label" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit5Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu5Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu5Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit5Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt6Panel">
                   <Properties>
@@ -510,15 +679,50 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu6Label" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu6Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit6Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu6Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu6Label" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit6Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu6Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu6Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit6Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit6ButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt7Panel">
                   <Properties>
@@ -530,15 +734,47 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu7Label" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu7Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit7Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu7Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu7Label" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit7Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu7Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu7Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit7Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt8Panel">
                   <Properties>
@@ -550,15 +786,47 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu8Label" alignment="1" pref="176" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu8Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit8Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu8Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu8Label" pref="42" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit8Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu8Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu8Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit8Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt9Panel">
                   <Properties>
@@ -570,15 +838,47 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu9Label" alignment="1" pref="176" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu9Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit9Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu9Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu9Label" pref="68" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit9Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu9Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu9Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit9Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt10Panel">
                   <Properties>
@@ -590,15 +890,47 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu10Label" alignment="1" pref="176" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu10Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit10Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu10Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu10Label" pref="68" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit10Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu10Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu10Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit10Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt11Panel">
                   <Properties>
@@ -610,15 +942,50 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu11Label" alignment="1" pref="176" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu11Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit11Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu11Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu11Label" pref="68" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit11Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu11Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu11Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit11Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit11ButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="Produkt12Panel">
                   <Properties>
@@ -630,15 +997,47 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="PopisProduktu12Label" alignment="1" pref="176" max="32767" attributes="0"/>
+                                  <Component id="ObrazokProduktu12Label" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Kupit12Button" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ObrazokProduktu12Label" min="-2" pref="176" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="PopisProduktu12Label" pref="68" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Kupit12Button" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ObrazokProduktu12Label">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="PopisProduktu12Label">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="Kupit12Button">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
               </SubComponents>
             </Container>
