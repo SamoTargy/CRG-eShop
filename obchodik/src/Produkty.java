@@ -6,6 +6,7 @@ public class Produkty extends javax.swing.JFrame {
     
     public Produkty() {
         initComponents();
+        
         ImageIcon imageProdukt1 = new ImageIcon("img/produkt1.png");
         ImageIcon imageProdukt2 = new ImageIcon("img/produkt1.png");
         ImageIcon imageProdukt3 = new ImageIcon("img/produkt1.png");
@@ -45,15 +46,15 @@ public class Produkty extends javax.swing.JFrame {
         ShopLabel = new javax.swing.JLabel();
         ShopSeparator = new javax.swing.JSeparator();
         domovPanel = new javax.swing.JPanel();
-        bDomov = new javax.swing.JButton();
+        domovButton = new javax.swing.JButton();
         produktyPanel = new javax.swing.JPanel();
-        bProdukty = new javax.swing.JButton();
+        produktyButton = new javax.swing.JButton();
         kontaktyPanel = new javax.swing.JPanel();
-        bKontakt = new javax.swing.JButton();
+        kontaktButton = new javax.swing.JButton();
         ucetPanel = new javax.swing.JPanel();
-        bUcet = new javax.swing.JButton();
+        ucetButton = new javax.swing.JButton();
         kosikPanel = new javax.swing.JPanel();
-        bKosik = new javax.swing.JButton();
+        kosikButton = new javax.swing.JButton();
         koniecButton = new javax.swing.JButton();
         ProduktyScrollPane = new javax.swing.JScrollPane();
         PanellSProduktmiPanel = new javax.swing.JPanel();
@@ -109,7 +110,6 @@ public class Produkty extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocationByPlatform(true);
         setResizable(false);
 
         panelLavyPanel.setBackground(new java.awt.Color(30, 144, 255));
@@ -123,11 +123,13 @@ public class Produkty extends javax.swing.JFrame {
 
         domovPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        bDomov.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        bDomov.setText("DOMOV");
-        bDomov.addActionListener(new java.awt.event.ActionListener() {
+        domovButton.setBackground(new java.awt.Color(40, 130, 255));
+        domovButton.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        domovButton.setText("DOMOV");
+        domovButton.setBorder(null);
+        domovButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bDomovActionPerformed(evt);
+                domovButtonActionPerformed(evt);
             }
         });
 
@@ -135,26 +137,22 @@ public class Produkty extends javax.swing.JFrame {
         domovPanel.setLayout(domovPanelLayout);
         domovPanelLayout.setHorizontalGroup(
             domovPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(domovPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bDomov, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(domovButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         domovPanelLayout.setVerticalGroup(
             domovPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(domovPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bDomov, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(domovButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
         produktyPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        bProdukty.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        bProdukty.setText("PRODUKTY");
-        bProdukty.addActionListener(new java.awt.event.ActionListener() {
+        produktyButton.setBackground(new java.awt.Color(40, 130, 255));
+        produktyButton.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        produktyButton.setText("PRODUKTY");
+        produktyButton.setBorder(null);
+        produktyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bProduktyActionPerformed(evt);
+                produktyButtonActionPerformed(evt);
             }
         });
 
@@ -162,26 +160,22 @@ public class Produkty extends javax.swing.JFrame {
         produktyPanel.setLayout(produktyPanelLayout);
         produktyPanelLayout.setHorizontalGroup(
             produktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(produktyPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bProdukty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(produktyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         produktyPanelLayout.setVerticalGroup(
             produktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(produktyPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bProdukty, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(produktyButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
         kontaktyPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        bKontakt.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        bKontakt.setText("KONTAKT");
-        bKontakt.addActionListener(new java.awt.event.ActionListener() {
+        kontaktButton.setBackground(new java.awt.Color(40, 130, 255));
+        kontaktButton.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        kontaktButton.setText("KONTAKT");
+        kontaktButton.setBorder(null);
+        kontaktButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bKontaktActionPerformed(evt);
+                kontaktButtonActionPerformed(evt);
             }
         });
 
@@ -189,26 +183,22 @@ public class Produkty extends javax.swing.JFrame {
         kontaktyPanel.setLayout(kontaktyPanelLayout);
         kontaktyPanelLayout.setHorizontalGroup(
             kontaktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kontaktyPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bKontakt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(kontaktButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         kontaktyPanelLayout.setVerticalGroup(
             kontaktyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kontaktyPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bKontakt, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(kontaktButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
         ucetPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        bUcet.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        bUcet.setText("ÚČET");
-        bUcet.addActionListener(new java.awt.event.ActionListener() {
+        ucetButton.setBackground(new java.awt.Color(40, 130, 255));
+        ucetButton.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        ucetButton.setText("ÚČET");
+        ucetButton.setBorder(null);
+        ucetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bUcetActionPerformed(evt);
+                ucetButtonActionPerformed(evt);
             }
         });
 
@@ -216,26 +206,22 @@ public class Produkty extends javax.swing.JFrame {
         ucetPanel.setLayout(ucetPanelLayout);
         ucetPanelLayout.setHorizontalGroup(
             ucetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ucetPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bUcet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(ucetButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         ucetPanelLayout.setVerticalGroup(
             ucetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ucetPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bUcet, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(ucetButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
         kosikPanel.setBackground(new java.awt.Color(40, 130, 255));
 
-        bKosik.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        bKosik.setText("KOŠÍK");
-        bKosik.addActionListener(new java.awt.event.ActionListener() {
+        kosikButton.setBackground(new java.awt.Color(40, 130, 255));
+        kosikButton.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        kosikButton.setText("KOŠÍK");
+        kosikButton.setBorder(null);
+        kosikButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bKosikActionPerformed(evt);
+                kosikButtonActionPerformed(evt);
             }
         });
 
@@ -243,17 +229,11 @@ public class Produkty extends javax.swing.JFrame {
         kosikPanel.setLayout(kosikPanelLayout);
         kosikPanelLayout.setHorizontalGroup(
             kosikPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kosikPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bKosik, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(kosikButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         kosikPanelLayout.setVerticalGroup(
             kosikPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kosikPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bKosik, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(kosikButton, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
 
         koniecButton.setBackground(new java.awt.Color(30, 144, 255));
@@ -293,7 +273,7 @@ public class Produkty extends javax.swing.JFrame {
                 .addComponent(ShopLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ShopSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(domovPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(produktyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -303,7 +283,7 @@ public class Produkty extends javax.swing.JFrame {
                 .addComponent(ucetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(kosikPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(koniecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -768,25 +748,23 @@ public class Produkty extends javax.swing.JFrame {
         pozadiePanelLayout.setHorizontalGroup(
             pozadiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pozadiePanelLayout.createSequentialGroup()
+                .addGap(1, 1, 1)
                 .addComponent(panelLavyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ProduktyScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE))
+                .addComponent(ProduktyScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 981, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         pozadiePanelLayout.setVerticalGroup(
             pozadiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(panelLavyPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(pozadiePanelLayout.createSequentialGroup()
-                .addGap(0, 15, Short.MAX_VALUE)
-                .addComponent(ProduktyScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(panelLavyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ProduktyScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(pozadiePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(pozadiePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -795,12 +773,6 @@ public class Produkty extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void koniecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_koniecButtonActionPerformed
-
-        System.exit(0);
-        
-    }//GEN-LAST:event_koniecButtonActionPerformed
 
     private void Kupit2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit2ButtonActionPerformed
         
@@ -822,29 +794,42 @@ public class Produkty extends javax.swing.JFrame {
         
     }//GEN-LAST:event_Kupit4ButtonActionPerformed
 
-    private void bDomovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDomovActionPerformed
+    private void domovButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_domovButtonActionPerformed
+
+        Domov Domov = new Domov();
+        Domov.show();
+        dispose();
+
+    }//GEN-LAST:event_domovButtonActionPerformed
+
+    private void produktyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produktyButtonActionPerformed
+
+        Produkty Produkty = new Produkty();
+        Produkty.show();
+        dispose();
+
+    }//GEN-LAST:event_produktyButtonActionPerformed
+
+    private void kontaktButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kontaktButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bDomovActionPerformed
+    }//GEN-LAST:event_kontaktButtonActionPerformed
 
-    private void bProduktyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProduktyActionPerformed
+    private void ucetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ucetButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bProduktyActionPerformed
+    }//GEN-LAST:event_ucetButtonActionPerformed
 
-    private void bKontaktActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKontaktActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bKontaktActionPerformed
+    private void kosikButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kosikButtonActionPerformed
 
-    private void bUcetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUcetActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bUcetActionPerformed
+        Kosik Kosik = new Kosik();
+        Kosik.show();
+        dispose();
 
-    private void bKosikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKosikActionPerformed
+    }//GEN-LAST:event_kosikButtonActionPerformed
 
-       Kosik Kosik = new Kosik();
-       Kosik.show();
-       dispose();
-        
-    }//GEN-LAST:event_bKosikActionPerformed
+    private void koniecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_koniecButtonActionPerformed
+
+        System.exit(0);
+    }//GEN-LAST:event_koniecButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -935,19 +920,19 @@ public class Produkty extends javax.swing.JFrame {
     public javax.swing.JScrollPane ProduktyScrollPane;
     public javax.swing.JLabel ShopLabel;
     public javax.swing.JSeparator ShopSeparator;
-    public javax.swing.JButton bDomov;
-    public javax.swing.JButton bKontakt;
-    public javax.swing.JButton bKosik;
-    public javax.swing.JButton bProdukty;
-    public javax.swing.JButton bUcet;
+    public javax.swing.JButton domovButton;
     public javax.swing.JPanel domovPanel;
     public javax.swing.JButton jButton1;
     public javax.swing.JButton koniecButton;
+    public javax.swing.JButton kontaktButton;
     public javax.swing.JPanel kontaktyPanel;
+    public javax.swing.JButton kosikButton;
     public javax.swing.JPanel kosikPanel;
     public javax.swing.JPanel panelLavyPanel;
     public javax.swing.JPanel pozadiePanel;
+    public javax.swing.JButton produktyButton;
     public javax.swing.JPanel produktyPanel;
+    public javax.swing.JButton ucetButton;
     public javax.swing.JPanel ucetPanel;
     // End of variables declaration//GEN-END:variables
 }

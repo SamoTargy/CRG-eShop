@@ -1,3 +1,6 @@
+
+import javax.swing.ImageIcon;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,13 +10,16 @@
  *
  * @author PC
  */
-public class Kosik extends javax.swing.JFrame {
+public class Domov extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame1
+     * Creates new form Domov
      */
-    public Kosik() {
+    public Domov() {
         initComponents();
+        
+        ImageIcon imageBanner1 = new ImageIcon("img/banner1.png");
+        LabelSBaneromPanel.setIcon(imageBanner1);        
     }
 
     /**
@@ -26,8 +32,6 @@ public class Kosik extends javax.swing.JFrame {
     private void initComponents() {
 
         pozadiePanel = new javax.swing.JPanel();
-        ProduktyScrollPane = new javax.swing.JScrollPane();
-        PanellSKosikomPanel = new javax.swing.JPanel();
         panelLavyPanel = new javax.swing.JPanel();
         ShopLabel = new javax.swing.JLabel();
         ShopSeparator = new javax.swing.JSeparator();
@@ -42,27 +46,10 @@ public class Kosik extends javax.swing.JFrame {
         kosikPanel = new javax.swing.JPanel();
         kosikButton = new javax.swing.JButton();
         koniecButton = new javax.swing.JButton();
+        LabelSBaneromPanel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
-
-        ProduktyScrollPane.setBorder(null);
-        ProduktyScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        ProduktyScrollPane.setToolTipText("");
-        ProduktyScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-
-        javax.swing.GroupLayout PanellSKosikomPanelLayout = new javax.swing.GroupLayout(PanellSKosikomPanel);
-        PanellSKosikomPanel.setLayout(PanellSKosikomPanelLayout);
-        PanellSKosikomPanelLayout.setHorizontalGroup(
-            PanellSKosikomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1039, Short.MAX_VALUE)
-        );
-        PanellSKosikomPanelLayout.setVerticalGroup(
-            PanellSKosikomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 913, Short.MAX_VALUE)
-        );
-
-        ProduktyScrollPane.setViewportView(PanellSKosikomPanel);
 
         panelLavyPanel.setBackground(new java.awt.Color(30, 144, 255));
 
@@ -235,10 +222,14 @@ public class Kosik extends javax.swing.JFrame {
                 .addComponent(ucetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(kosikPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(koniecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(21, 21, 21))
         );
+
+        LabelSBaneromPanel.setBackground(new java.awt.Color(255, 255, 255));
+        LabelSBaneromPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelSBaneromPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout pozadiePanelLayout = new javax.swing.GroupLayout(pozadiePanel);
         pozadiePanel.setLayout(pozadiePanelLayout);
@@ -247,13 +238,13 @@ public class Kosik extends javax.swing.JFrame {
             .addGroup(pozadiePanelLayout.createSequentialGroup()
                 .addGap(1, 1, 1)
                 .addComponent(panelLavyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ProduktyScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 980, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(LabelSBaneromPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE))
         );
         pozadiePanelLayout.setVerticalGroup(
             pozadiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelLavyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(ProduktyScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(LabelSBaneromPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -323,28 +314,26 @@ public class Kosik extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Kosik.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Domov.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Kosik.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Domov.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Kosik.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Domov.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Kosik.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Domov.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Kosik().setVisible(true);
+                new Domov().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel PanellSKosikomPanel;
-    private javax.swing.JScrollPane ProduktyScrollPane;
+    private javax.swing.JLabel LabelSBaneromPanel;
     private javax.swing.JLabel ShopLabel;
     private javax.swing.JSeparator ShopSeparator;
     private javax.swing.JButton domovButton;
