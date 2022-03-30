@@ -274,16 +274,18 @@ public class Kosik extends javax.swing.JFrame {
 
     private void domovButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_domovButtonActionPerformed
 
-        Domov Domov = new Domov();
-        Domov.show();
-        dispose();
+        Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
+        Domov.show(); // Zobrazí Jframe(Domov)
+        dispose(); // Zatvoí povodný Jframe
+        
     }//GEN-LAST:event_domovButtonActionPerformed
 
     private void produktyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produktyButtonActionPerformed
 
-        Produkty Produkty = new Produkty();
-        Produkty.show();
-        dispose();
+        Produkty Produkty = new Produkty(); // Zadefinuje Jframe(Produkty)
+        Produkty.show(); // Zobrazí Jframe(Produkty)
+        dispose(); // Zatvoí povodný Jframe
+        
     }//GEN-LAST:event_produktyButtonActionPerformed
 
     private void kontaktButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kontaktButtonActionPerformed
@@ -296,14 +298,16 @@ public class Kosik extends javax.swing.JFrame {
 
     private void kosikButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kosikButtonActionPerformed
 
-        Kosik Kosik = new Kosik();
-        Kosik.show();
-        dispose();
+        Kosik Kosik = new Kosik(); // Zadefinuje Jframe(Kosik)
+        Kosik.show(); // Zobrazí Jframe(Kosik)
+        dispose(); // Zatvoí povodný Jframe
+        
     }//GEN-LAST:event_kosikButtonActionPerformed
 
     private void koniecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_koniecButtonActionPerformed
 
-        System.exit(0);
+        System.exit(0); // Ukončí všetky úkony a zatvorí program
+        
     }//GEN-LAST:event_koniecButtonActionPerformed
 
     /**

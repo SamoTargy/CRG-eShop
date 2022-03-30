@@ -7,31 +7,32 @@ public class Produkty extends javax.swing.JFrame {
     public Produkty() {
         initComponents();
         
-        ImageIcon imageProdukt1 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt2 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt3 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt4 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt5 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt6 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt7 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt8 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt9 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt10 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt11 = new ImageIcon("img/produkt1.png");
-        ImageIcon imageProdukt12 = new ImageIcon("img/produkt1.png");
-        ObrazokProduktu1Label.setIcon(imageProdukt1);
-        ObrazokProduktu2Label.setIcon(imageProdukt1);
-        ObrazokProduktu3Label.setIcon(imageProdukt1);
-        ObrazokProduktu4Label.setIcon(imageProdukt1);
-        ObrazokProduktu5Label.setIcon(imageProdukt1);
-        ObrazokProduktu6Label.setIcon(imageProdukt1);
-        ObrazokProduktu7Label.setIcon(imageProdukt1);
-        ObrazokProduktu8Label.setIcon(imageProdukt1);
-        ObrazokProduktu9Label.setIcon(imageProdukt1);
-        ObrazokProduktu10Label.setIcon(imageProdukt1);
-        ObrazokProduktu11Label.setIcon(imageProdukt1);
-        ObrazokProduktu12Label.setIcon(imageProdukt1);
-        
+        ImageIcon imageProdukt1 = new ImageIcon("img/produkt1.png"); //
+        ImageIcon imageProdukt2 = new ImageIcon("img/produkt1.png"); //
+        ImageIcon imageProdukt3 = new ImageIcon("img/produkt1.png"); //
+        ImageIcon imageProdukt4 = new ImageIcon("img/produkt1.png"); //
+        ImageIcon imageProdukt5 = new ImageIcon("img/produkt1.png"); //
+        ImageIcon imageProdukt6 = new ImageIcon("img/produkt1.png"); // Vytvorí ImageIcon do ktorého
+        ImageIcon imageProdukt7 = new ImageIcon("img/produkt1.png"); // sa následne uloží obrázok 
+        ImageIcon imageProdukt8 = new ImageIcon("img/produkt1.png"); //
+        ImageIcon imageProdukt9 = new ImageIcon("img/produkt1.png"); //
+        ImageIcon imageProdukt10 = new ImageIcon("img/produkt1.png");//
+        ImageIcon imageProdukt11 = new ImageIcon("img/produkt1.png");//
+        ImageIcon imageProdukt12 = new ImageIcon("img/produkt1.png");//
+        //--------------------------------------------------------------------------------------
+        ObrazokProduktu1Label.setIcon(imageProdukt1); //
+        ObrazokProduktu2Label.setIcon(imageProdukt1); //
+        ObrazokProduktu3Label.setIcon(imageProdukt1); //
+        ObrazokProduktu4Label.setIcon(imageProdukt1); //
+        ObrazokProduktu5Label.setIcon(imageProdukt1); //
+        ObrazokProduktu6Label.setIcon(imageProdukt1); // Nastavý do bjektu Label ImageIcon(obrázok)
+        ObrazokProduktu7Label.setIcon(imageProdukt1); //
+        ObrazokProduktu8Label.setIcon(imageProdukt1); //
+        ObrazokProduktu9Label.setIcon(imageProdukt1); //
+        ObrazokProduktu10Label.setIcon(imageProdukt1);//
+        ObrazokProduktu11Label.setIcon(imageProdukt1);//
+        ObrazokProduktu12Label.setIcon(imageProdukt1);//
+//----------------------------------------------------------------------------------------------       
         
         
     }
@@ -796,17 +797,17 @@ public class Produkty extends javax.swing.JFrame {
 
     private void domovButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_domovButtonActionPerformed
 
-        Domov Domov = new Domov();
-        Domov.show();
-        dispose();
+        Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
+        Domov.show(); // Zobrazí Jframe(Domov)
+        dispose(); // Zatvoí povodný Jframe
 
     }//GEN-LAST:event_domovButtonActionPerformed
 
     private void produktyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produktyButtonActionPerformed
 
-        Produkty Produkty = new Produkty();
-        Produkty.show();
-        dispose();
+        Produkty Produkty = new Produkty(); // Zadefinuje Jframe(Produkty)
+        Produkty.show(); // Zobrazí Jframe(Produkty)
+        dispose(); // Zatvoí povodný Jframe
 
     }//GEN-LAST:event_produktyButtonActionPerformed
 
@@ -820,15 +821,16 @@ public class Produkty extends javax.swing.JFrame {
 
     private void kosikButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kosikButtonActionPerformed
 
-        Kosik Kosik = new Kosik();
-        Kosik.show();
-        dispose();
+        Kosik Kosik = new Kosik(); // Zadefinuje Jframe(Kosik)
+        Kosik.show(); // Zobrazí Jframe(Kosik)
+        dispose(); // Zatvoí povodný Jframe
 
     }//GEN-LAST:event_kosikButtonActionPerformed
 
     private void koniecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_koniecButtonActionPerformed
 
-        System.exit(0);
+        System.exit(0); // Ukončí všetky úkony a zatvorí program
+        
     }//GEN-LAST:event_koniecButtonActionPerformed
 
     /**
