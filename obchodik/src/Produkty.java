@@ -812,11 +812,19 @@ public class Produkty extends javax.swing.JFrame {
     }//GEN-LAST:event_produktyButtonActionPerformed
 
     private void kontaktButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kontaktButtonActionPerformed
-        // TODO add your handling code here:
+                        
+        Kontakt Kontakt = new Kontakt(); // Zadefinuje Jframe(Kontakt)
+        Kontakt.show(); // Zobrazí Jframe(Domov)
+        dispose(); // Zatvoí povodný Jframe
+        
     }//GEN-LAST:event_kontaktButtonActionPerformed
 
     private void ucetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ucetButtonActionPerformed
-        // TODO add your handling code here:
+                
+        Ucet Ucet = new Ucet(); // Zadefinuje Jframe(Ucet)
+        Ucet.show(); // Zobrazí Jframe(Ucet)
+        dispose(); // Zatvoí povodný Jframe
+        
     }//GEN-LAST:event_ucetButtonActionPerformed
 
     private void kosikButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kosikButtonActionPerformed
