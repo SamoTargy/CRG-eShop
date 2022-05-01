@@ -28,20 +28,22 @@ public class Statistiky extends javax.swing.JFrame {
         pozadiePanel = new javax.swing.JPanel();
         panelLavyPanel = new javax.swing.JPanel();
         ShopLabel = new javax.swing.JLabel();
+        AdminLabel = new javax.swing.JLabel();
         ShopSeparator = new javax.swing.JSeparator();
         StatistikaPanel = new javax.swing.JPanel();
         StatistikaButton = new javax.swing.JButton();
         koniecButton = new javax.swing.JButton();
-        ShopLabel1 = new javax.swing.JLabel();
-        koniecButton1 = new javax.swing.JButton();
-        MenoLabel2 = new javax.swing.JLabel();
-        MenoTextField2 = new javax.swing.JTextField();
-        MenoTextField1 = new javax.swing.JTextField();
-        MenoLabel1 = new javax.swing.JLabel();
-        MenoLabel = new javax.swing.JLabel();
-        MenoTextField = new javax.swing.JTextField();
-        MenoLabel3 = new javax.swing.JLabel();
-        MenoTextField3 = new javax.swing.JTextField();
+        OdhlasitButton = new javax.swing.JButton();
+        VystProduktyLabel = new javax.swing.JLabel();
+        VystProduktyTextField = new javax.swing.JTextField();
+        PredProduktyLabel = new javax.swing.JLabel();
+        PredProduktyTextField = new javax.swing.JTextField();
+        RegistUzivLabel = new javax.swing.JLabel();
+        RegistUzivTextField = new javax.swing.JTextField();
+        ZiskyLabel = new javax.swing.JLabel();
+        ZiskyTextField = new javax.swing.JTextField();
+        NajProduktyLabel = new javax.swing.JLabel();
+        NajProduktyTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -51,6 +53,10 @@ public class Statistiky extends javax.swing.JFrame {
         ShopLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         ShopLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ShopLabel.setText("Targoshop");
+
+        AdminLabel.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        AdminLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AdminLabel.setText("Admin");
 
         ShopSeparator.setBackground(new java.awt.Color(0, 0, 0));
         ShopSeparator.setForeground(new java.awt.Color(0, 0, 0));
@@ -89,18 +95,14 @@ public class Statistiky extends javax.swing.JFrame {
             }
         });
 
-        ShopLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        ShopLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ShopLabel1.setText("Admin");
-
-        koniecButton1.setBackground(new java.awt.Color(30, 144, 255));
-        koniecButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
-        koniecButton1.setText("Odhlasiť sa");
-        koniecButton1.setToolTipText("");
-        koniecButton1.setBorder(null);
-        koniecButton1.addActionListener(new java.awt.event.ActionListener() {
+        OdhlasitButton.setBackground(new java.awt.Color(30, 144, 255));
+        OdhlasitButton.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
+        OdhlasitButton.setText("Odhlasiť sa");
+        OdhlasitButton.setToolTipText("");
+        OdhlasitButton.setBorder(null);
+        OdhlasitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                koniecButton1ActionPerformed(evt);
+                OdhlasitButtonActionPerformed(evt);
             }
         });
 
@@ -118,13 +120,13 @@ public class Statistiky extends javax.swing.JFrame {
                             .addGroup(panelLavyPanelLayout.createSequentialGroup()
                                 .addComponent(koniecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(koniecButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(OdhlasitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(10, 10, 10))))
                     .addGroup(panelLavyPanelLayout.createSequentialGroup()
                         .addGroup(panelLavyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelLavyPanelLayout.createSequentialGroup()
                                 .addGap(184, 184, 184)
-                                .addComponent(ShopLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(AdminLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelLavyPanelLayout.createSequentialGroup()
                                 .addGap(88, 88, 88)
                                 .addComponent(ShopLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -137,7 +139,7 @@ public class Statistiky extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addComponent(ShopLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
-                .addComponent(ShopLabel1)
+                .addComponent(AdminLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ShopSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
@@ -145,7 +147,7 @@ public class Statistiky extends javax.swing.JFrame {
                 .addGap(379, 379, 379)
                 .addGroup(panelLavyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(koniecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(koniecButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(OdhlasitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 
@@ -160,29 +162,44 @@ public class Statistiky extends javax.swing.JFrame {
             .addComponent(panelLavyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        MenoLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        MenoLabel2.setText("Počet predaných produktov:");
+        VystProduktyLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        VystProduktyLabel.setText("Počet vystavených produktov:");
 
-        MenoTextField2.addActionListener(new java.awt.event.ActionListener() {
+        VystProduktyTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenoTextField2ActionPerformed(evt);
+                VystProduktyTextFieldActionPerformed(evt);
             }
         });
 
-        MenoLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        MenoLabel1.setText("Najpredávaniejší produkt:");
+        PredProduktyLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        PredProduktyLabel.setText("Počet predaných produktov:");
 
-        MenoLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        MenoLabel.setText("Celkové zisky:");
-
-        MenoTextField.addActionListener(new java.awt.event.ActionListener() {
+        PredProduktyTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenoTextFieldActionPerformed(evt);
+                PredProduktyTextFieldActionPerformed(evt);
             }
         });
 
-        MenoLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        MenoLabel3.setText("Počet registrovaných užívateľov:");
+        RegistUzivLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        RegistUzivLabel.setText("Počet registrovaných užívateľov:");
+
+        ZiskyLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        ZiskyLabel.setText("Celkové zisky:");
+
+        ZiskyTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ZiskyTextFieldActionPerformed(evt);
+            }
+        });
+
+        NajProduktyLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
+        NajProduktyLabel.setText("Najpredávaniejší produkt:");
+
+        NajProduktyTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NajProduktyTextFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -191,17 +208,19 @@ public class Statistiky extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pozadiePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(81, 81, 81)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(MenoLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MenoLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MenoLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MenoLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(VystProduktyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(NajProduktyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ZiskyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PredProduktyLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RegistUzivLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MenoTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MenoTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MenoTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MenoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NajProduktyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PredProduktyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistUzivTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ZiskyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(VystProduktyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(468, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -210,26 +229,26 @@ public class Statistiky extends javax.swing.JFrame {
                 .addComponent(pozadiePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(175, 175, 175)
+                .addGap(121, 121, 121)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(MenoLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MenoTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(MenoLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
-                    .addComponent(MenoTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(VystProduktyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(VystProduktyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(MenoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(MenoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PredProduktyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PredProduktyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(MenoLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(MenoTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RegistUzivTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistUzivLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ZiskyLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ZiskyTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NajProduktyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NajProduktyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -251,21 +270,29 @@ public class Statistiky extends javax.swing.JFrame {
 
     }//GEN-LAST:event_koniecButtonActionPerformed
 
-    private void MenoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenoTextFieldActionPerformed
+    private void ZiskyTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZiskyTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MenoTextFieldActionPerformed
+    }//GEN-LAST:event_ZiskyTextFieldActionPerformed
 
-    private void MenoTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenoTextField2ActionPerformed
+    private void PredProduktyTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PredProduktyTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_MenoTextField2ActionPerformed
+    }//GEN-LAST:event_PredProduktyTextFieldActionPerformed
 
-    private void koniecButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_koniecButton1ActionPerformed
+    private void OdhlasitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OdhlasitButtonActionPerformed
         
         Prihlasenie Prihlasenie = new Prihlasenie(); // Zadefinuje Jframe(Prihlasenie)
         Prihlasenie.show(); // Zobrazí Jframe(Prihlasenie)
         dispose(); // Zatvoí povodný Jframe
 
-    }//GEN-LAST:event_koniecButton1ActionPerformed
+    }//GEN-LAST:event_OdhlasitButtonActionPerformed
+
+    private void VystProduktyTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VystProduktyTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VystProduktyTextFieldActionPerformed
+
+    private void NajProduktyTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NajProduktyTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NajProduktyTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -303,21 +330,23 @@ public class Statistiky extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel MenoLabel;
-    private javax.swing.JLabel MenoLabel1;
-    private javax.swing.JLabel MenoLabel2;
-    private javax.swing.JLabel MenoLabel3;
-    private javax.swing.JTextField MenoTextField;
-    private javax.swing.JTextField MenoTextField1;
-    private javax.swing.JTextField MenoTextField2;
-    private javax.swing.JTextField MenoTextField3;
+    private javax.swing.JLabel AdminLabel;
+    private javax.swing.JLabel NajProduktyLabel;
+    private javax.swing.JTextField NajProduktyTextField;
+    private javax.swing.JButton OdhlasitButton;
+    private javax.swing.JLabel PredProduktyLabel;
+    private javax.swing.JTextField PredProduktyTextField;
+    private javax.swing.JLabel RegistUzivLabel;
+    private javax.swing.JTextField RegistUzivTextField;
     private javax.swing.JLabel ShopLabel;
-    private javax.swing.JLabel ShopLabel1;
     private javax.swing.JSeparator ShopSeparator;
     private javax.swing.JButton StatistikaButton;
     private javax.swing.JPanel StatistikaPanel;
+    private javax.swing.JLabel VystProduktyLabel;
+    private javax.swing.JTextField VystProduktyTextField;
+    private javax.swing.JLabel ZiskyLabel;
+    private javax.swing.JTextField ZiskyTextField;
     private javax.swing.JButton koniecButton;
-    private javax.swing.JButton koniecButton1;
     private javax.swing.JPanel panelLavyPanel;
     private javax.swing.JPanel pozadiePanel;
     // End of variables declaration//GEN-END:variables
