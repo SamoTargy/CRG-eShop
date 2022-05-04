@@ -1,19 +1,11 @@
-
 import javax.swing.ImageIcon;
-
 public class Ucet extends javax.swing.JFrame {
-
-    
     public Ucet() {
         initComponents();
         
         ImageIcon imagePerson = new ImageIcon("img/person.png");// Vytvorí ImageIcon do ktorého sa následne uloží obrázok sa následne uloží obrázok 
-        PersonLabel.setIcon(imagePerson); // Nastavý do bjektu Label ImageIcon(obrázok)
-        
-        
-        
+        PersonLabel.setIcon(imagePerson); // Nastavý do bjektu Label ImageIcon(obrázok)  
     }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -374,48 +366,42 @@ public class Ucet extends javax.swing.JFrame {
 
     private void koniecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_koniecButtonActionPerformed
 
-        System.exit(0); // Ukončí všetky úkony a zatvorí program
-        
+        System.exit(0); // Ukončí všetky úkony a zatvorí program  
     }//GEN-LAST:event_koniecButtonActionPerformed
 
     private void kosikButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kosikButtonActionPerformed
 
         Kosik Kosik = new Kosik(); // Zadefinuje Jframe(Kosik)
         Kosik.show(); // Zobrazí Jframe(Kosik)
-        dispose(); // Zatvoí povodný Jframe
-        
+        dispose(); // Zatvorí povodný Jframe  
     }//GEN-LAST:event_kosikButtonActionPerformed
 
     private void ucetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ucetButtonActionPerformed
 
         Ucet Ucet = new Ucet(); // Zadefinuje Jframe(Ucet)
         Ucet.show(); // Zobrazí Jframe(Ucet)
-        dispose(); // Zatvoí povodný Jframe
-        
+        dispose(); // Zatvorí povodný Jframe  
     }//GEN-LAST:event_ucetButtonActionPerformed
 
     private void kontaktButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kontaktButtonActionPerformed
                         
         Kontakt Kontakt = new Kontakt(); // Zadefinuje Jframe(Kontakt)
         Kontakt.show(); // Zobrazí Jframe(Domov)
-        dispose(); // Zatvoí povodný Jframe
-        
+        dispose(); // Zatvoí povodný Jframe 
     }//GEN-LAST:event_kontaktButtonActionPerformed
 
     private void produktyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produktyButtonActionPerformed
 
         Produkty Produkty = new Produkty(); // Zadefinuje Jframe(Produkty)
         Produkty.show(); // Zobrazí Jframe(Produkty)
-        dispose(); // Zatvoí povodný Jframe
-        
+        dispose(); // Zatvorí povodný Jframe   
     }//GEN-LAST:event_produktyButtonActionPerformed
 
     private void domovButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_domovButtonActionPerformed
 
         Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
         Domov.show(); // Zobrazí Jframe(Domov)
-        dispose(); // Zatvoí povodný Jframe
-        
+        dispose(); // Zatvorí povodný Jframe   
     }//GEN-LAST:event_domovButtonActionPerformed
 
     private void ZmenitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZmenitButtonActionPerformed
@@ -431,7 +417,6 @@ public class Ucet extends javax.swing.JFrame {
         Prihlasenie Prihlasenie = new Prihlasenie(); // Zadefinuje Jframe(Prihlasenie)
         Prihlasenie.show(); // Zobrazí Jframe(Prihlasenie)
         dispose(); // Zatvoí povodný Jframe
-        
     }//GEN-LAST:event_OdhlasitSaButton1ActionPerformed
 
     /**
