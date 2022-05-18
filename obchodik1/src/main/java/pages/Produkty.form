@@ -469,13 +469,16 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu1Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Kuracia bagetka"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit1Button">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit1ButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -521,7 +524,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu2Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Debrec&#xed;nska bagetka"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit2Button">
@@ -576,7 +579,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu3Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="P&#xe1;liv&#xe1; bagetka"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit3Button">
@@ -631,7 +634,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu4Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="&#x160;unkov&#xe1; bagetka"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit4Button">
@@ -686,7 +689,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu5Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Bavorsk&#xe1; bagetka"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit5Button">
@@ -738,7 +741,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu6Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Debrac&#xed;nska bagetka +chilli"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit6Button">
@@ -793,7 +796,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu7Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Ra&#x17e;ni&#x10d;i bagetka"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit7Button">
@@ -845,7 +848,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu8Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Par&#xed;&#x17e;ska bagetka"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit8Button">
@@ -897,7 +900,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu9Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Tuniakov&#xfd; sendvi&#x10d;"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit9Button">
@@ -949,7 +952,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu10Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="&#x160;unkov&#xfd; sendvi&#x10d;"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit10Button">
@@ -1001,7 +1004,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu11Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Pe&#x10d;en&#xe1; slaninka sendvi&#x10d;"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit11Button">
@@ -1056,7 +1059,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="PopisProduktu12Label">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Popis produktu"/>
+                        <Property name="text" type="java.lang.String" value="Za&#xfa;den&#xe1; &#x161;unka sendvi&#x10d;"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="Kupit12Button">

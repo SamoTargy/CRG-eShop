@@ -9,31 +9,31 @@ public class Produkty extends javax.swing.JFrame {
     public Produkty() {
         initComponents();
         
-        ImageIcon imageProdukt1 = new ImageIcon("img/produkt1.png"); //
-        ImageIcon imageProdukt2 = new ImageIcon("img/produkt1.png"); //
-        ImageIcon imageProdukt3 = new ImageIcon("img/produkt1.png"); //
-        ImageIcon imageProdukt4 = new ImageIcon("img/produkt1.png"); //
-        ImageIcon imageProdukt5 = new ImageIcon("img/produkt1.png"); //
-        ImageIcon imageProdukt6 = new ImageIcon("img/produkt1.png"); // Vytvorí ImageIcon do ktorého
-        ImageIcon imageProdukt7 = new ImageIcon("img/produkt1.png"); // sa následne uloží obrázok 
-        ImageIcon imageProdukt8 = new ImageIcon("img/produkt1.png"); //
-        ImageIcon imageProdukt9 = new ImageIcon("img/produkt1.png"); //
-        ImageIcon imageProdukt10 = new ImageIcon("img/produkt1.png");//
-        ImageIcon imageProdukt11 = new ImageIcon("img/produkt1.png");//
-        ImageIcon imageProdukt12 = new ImageIcon("img/produkt1.png");//
+        ImageIcon imageProdukt1 = new ImageIcon("img/B1.png"); //
+        ImageIcon imageProdukt2 = new ImageIcon("img/B2.png"); //
+        ImageIcon imageProdukt3 = new ImageIcon("img/B3.png"); //
+        ImageIcon imageProdukt4 = new ImageIcon("img/B4.png"); //
+        ImageIcon imageProdukt5 = new ImageIcon("img/B5.png"); //
+        ImageIcon imageProdukt6 = new ImageIcon("img/B6.png"); // Vytvorí ImageIcon do ktorého
+        ImageIcon imageProdukt7 = new ImageIcon("img/B7.png"); // sa následne uloží obrázok 
+        ImageIcon imageProdukt8 = new ImageIcon("img/B8.png"); //
+        ImageIcon imageProdukt9 = new ImageIcon("img/S1.png"); //
+        ImageIcon imageProdukt10 = new ImageIcon("img/S2.png");//
+        ImageIcon imageProdukt11 = new ImageIcon("img/S3.png");//
+        ImageIcon imageProdukt12 = new ImageIcon("img/S4.png");//
         //--------------------------------------------------------------------------------------
         ObrazokProduktu1Label.setIcon(imageProdukt1); //
-        ObrazokProduktu2Label.setIcon(imageProdukt1); //
-        ObrazokProduktu3Label.setIcon(imageProdukt1); //
-        ObrazokProduktu4Label.setIcon(imageProdukt1); //
-        ObrazokProduktu5Label.setIcon(imageProdukt1); //
-        ObrazokProduktu6Label.setIcon(imageProdukt1); // Nastavý do bjektu Label ImageIcon(obrázok)
-        ObrazokProduktu7Label.setIcon(imageProdukt1); //
-        ObrazokProduktu8Label.setIcon(imageProdukt1); //
-        ObrazokProduktu9Label.setIcon(imageProdukt1); //
-        ObrazokProduktu10Label.setIcon(imageProdukt1);//
-        ObrazokProduktu11Label.setIcon(imageProdukt1);//
-        ObrazokProduktu12Label.setIcon(imageProdukt1);//
+        ObrazokProduktu2Label.setIcon(imageProdukt2); //
+        ObrazokProduktu3Label.setIcon(imageProdukt3); //
+        ObrazokProduktu4Label.setIcon(imageProdukt4); //
+        ObrazokProduktu5Label.setIcon(imageProdukt5); //
+        ObrazokProduktu6Label.setIcon(imageProdukt6); // Nastavý do bjektu Label ImageIcon(obrázok)
+        ObrazokProduktu7Label.setIcon(imageProdukt7); //
+        ObrazokProduktu8Label.setIcon(imageProdukt8); //
+        ObrazokProduktu9Label.setIcon(imageProdukt9); //
+        ObrazokProduktu10Label.setIcon(imageProdukt10);//
+        ObrazokProduktu11Label.setIcon(imageProdukt11);//
+        ObrazokProduktu12Label.setIcon(imageProdukt12);//
 //----------------------------------------------------------------------------------------------       
         
         
@@ -298,9 +298,14 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt1Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu1Label.setText("Popis produktu");
+        PopisProduktu1Label.setText("Kuracia bagetka");
 
         Kupit1Button.setText("Do košíka");
+        Kupit1Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Kupit1ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Produkt1PanelLayout = new javax.swing.GroupLayout(Produkt1Panel);
         Produkt1Panel.setLayout(Produkt1PanelLayout);
@@ -329,7 +334,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt2Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu2Label.setText("Popis produktu");
+        PopisProduktu2Label.setText("Debrecínska bagetka");
 
         Kupit2Button.setText("Do košíka");
         Kupit2Button.addActionListener(new java.awt.event.ActionListener() {
@@ -365,7 +370,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt3Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu3Label.setText("Popis produktu");
+        PopisProduktu3Label.setText("Pálivá bagetka");
 
         Kupit3Button.setText("Do košíka");
         Kupit3Button.addActionListener(new java.awt.event.ActionListener() {
@@ -401,7 +406,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt4Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu4Label.setText("Popis produktu");
+        PopisProduktu4Label.setText("Šunková bagetka");
 
         Kupit4Button.setText("Do košíka");
         Kupit4Button.addActionListener(new java.awt.event.ActionListener() {
@@ -437,7 +442,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt5Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu5Label.setText("Popis produktu");
+        PopisProduktu5Label.setText("Bavorská bagetka");
 
         Kupit5Button.setText("Do košíka");
 
@@ -468,7 +473,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt6Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu6Label.setText("Popis produktu");
+        PopisProduktu6Label.setText("Debracínska bagetka +chilli");
 
         Kupit6Button.setText("Do košíka");
         Kupit6Button.addActionListener(new java.awt.event.ActionListener() {
@@ -504,7 +509,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt7Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu7Label.setText("Popis produktu");
+        PopisProduktu7Label.setText("Ražniči bagetka");
 
         Kupit7Button.setText("Do košíka");
 
@@ -535,7 +540,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt8Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu8Label.setText("Popis produktu");
+        PopisProduktu8Label.setText("Parížska bagetka");
 
         Kupit8Button.setText("Do košíka");
 
@@ -566,7 +571,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt9Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu9Label.setText("Popis produktu");
+        PopisProduktu9Label.setText("Tuniakový sendvič");
 
         Kupit9Button.setText("Do košíka");
 
@@ -597,7 +602,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt10Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu10Label.setText("Popis produktu");
+        PopisProduktu10Label.setText("Šunkový sendvič");
 
         Kupit10Button.setText("Do košíka");
 
@@ -628,7 +633,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt11Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu11Label.setText("Popis produktu");
+        PopisProduktu11Label.setText("Pečená slaninka sendvič");
 
         Kupit11Button.setText("Do košíka");
         Kupit11Button.addActionListener(new java.awt.event.ActionListener() {
@@ -664,7 +669,7 @@ public class Produkty extends javax.swing.JFrame {
 
         Produkt12Panel.setBackground(new java.awt.Color(205, 205, 205));
 
-        PopisProduktu12Label.setText("Popis produktu");
+        PopisProduktu12Label.setText("Zaúdená šunka sendvič");
 
         Kupit12Button.setText("Do košíka");
 
@@ -843,6 +848,10 @@ public class Produkty extends javax.swing.JFrame {
         System.exit(0); // Ukončí všetky úkony a zatvorí program
         
     }//GEN-LAST:event_koniecButtonActionPerformed
+
+    private void Kupit1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit1ButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Kupit1ButtonActionPerformed
 
     /**
      * @param args the command line arguments
