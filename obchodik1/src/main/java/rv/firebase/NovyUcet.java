@@ -1,4 +1,4 @@
-package com.mycompany.obchodik1;
+package rv.firebase;
 
 public class NovyUcet extends javax.swing.JFrame {
     /**

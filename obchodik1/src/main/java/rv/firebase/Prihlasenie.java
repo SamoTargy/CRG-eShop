@@ -1,4 +1,4 @@
-package com.mycompany.obchodik1;
+package rv.firebase;
 
 import javax.swing.JOptionPane;
 public class Prihlasenie extends javax.swing.JFrame {
