@@ -67,7 +67,7 @@
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="ZrusitButton" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="PrihlasitButton" min="-2" pref="105" max="-2" attributes="0"/>
+              <Component id="RegistrovatButton" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -100,7 +100,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="UzMamUcetButton" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="PrihlasitButton" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="RegistrovatButton" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="ZrusitButton" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -222,18 +222,18 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ZrusitButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="PrihlasitButton">
+    <Component class="javax.swing.JButton" name="RegistrovatButton">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="cc" red="cc" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Prihl&#xe1;si&#x165;"/>
+        <Property name="text" type="java.lang.String" value="Registrova&#x165; sa"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PrihlasitButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistrovatButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

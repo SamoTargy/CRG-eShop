@@ -1,12 +1,20 @@
 package pages;
 
 import javax.swing.JOptionPane;
+import com.google.cloud.firestore.DocumentSnapshot;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Prihlasenie extends javax.swing.JFrame {
     /**
      * Creates new form Prihlásenie
      */
     public Prihlasenie() {
         initComponents();
+                        try {
+            ConnectionFirebase.connection();
+            }catch(Exception e){
+        }
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -171,6 +179,13 @@ public class Prihlasenie extends javax.swing.JFrame {
 
     private void PrihlasitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrihlasitButtonActionPerformed
 
+        
+        Nieco nieco = new Nieco();
+        try{
+            nieco.urob();
+        }catch (Exception e){
+        }
+        
         String heslo = HesloPasswordField.getText();  // Zadefinuje premennú heslo a vlozí doň text
         String meno = MenoTextField.getText();  // Zadefinuje premennú meno a vlozí doň text
         if (heslo.contains("1") && meno.contains("1")) //kontroluje zhodnosť mena a hesla
@@ -250,9 +265,9 @@ public class Prihlasenie extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel HesloLabel;
-    private javax.swing.JPasswordField HesloPasswordField;
+    public static javax.swing.JPasswordField HesloPasswordField;
     private javax.swing.JLabel MenoLabel;
-    private javax.swing.JTextField MenoTextField;
+    public static javax.swing.JTextField MenoTextField;
     private javax.swing.JButton NemamUcetButton;
     private javax.swing.JLabel PrihlasenieLabel;
     private javax.swing.JPanel PrihlaseniePanel;

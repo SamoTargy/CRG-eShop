@@ -1,11 +1,18 @@
 package pages;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class NovyUcet extends javax.swing.JFrame {
     /**
      * Creates new form NovyUcet
      */
     public NovyUcet() {
         initComponents();
+                try {
+            ConnectionFirebase.connection();
+            }catch(Exception e){
+        }
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -23,7 +30,7 @@ public class NovyUcet extends javax.swing.JFrame {
         HesloPasswordField = new javax.swing.JPasswordField();
         UzMamUcetButton = new javax.swing.JButton();
         ZrusitButton = new javax.swing.JButton();
-        PrihlasitButton = new javax.swing.JButton();
+        RegistrovatButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,12 +98,12 @@ public class NovyUcet extends javax.swing.JFrame {
             }
         });
 
-        PrihlasitButton.setBackground(new java.awt.Color(204, 204, 255));
-        PrihlasitButton.setText("Prihlásiť");
-        PrihlasitButton.setBorder(null);
-        PrihlasitButton.addActionListener(new java.awt.event.ActionListener() {
+        RegistrovatButton.setBackground(new java.awt.Color(204, 204, 255));
+        RegistrovatButton.setText("Registrovať sa");
+        RegistrovatButton.setBorder(null);
+        RegistrovatButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PrihlasitButtonActionPerformed(evt);
+                RegistrovatButtonActionPerformed(evt);
             }
         });
 
@@ -137,7 +144,7 @@ public class NovyUcet extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addComponent(ZrusitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
-                .addComponent(PrihlasitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RegistrovatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -164,7 +171,7 @@ public class NovyUcet extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UzMamUcetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(PrihlasitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(RegistrovatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(ZrusitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
@@ -183,21 +190,24 @@ public class NovyUcet extends javax.swing.JFrame {
 
     }//GEN-LAST:event_ZrusitButtonActionPerformed
 
-    private void PrihlasitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrihlasitButtonActionPerformed
+    private void RegistrovatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrovatButtonActionPerformed
 
-        String heslo = HesloPasswordField.getText();  // Zadefinuje premennú heslo a vlozí doň text
-        String meno = MenoTextField.getText();  // Zadefinuje premennú meno a vlozí doň text
-        if (heslo.contains("1") && meno.contains("1")) //kontroluje zhodnosť mena a hesla
-        {
-            HesloPasswordField.setText(null); //vymaže text v poli heslo
-            MenoTextField.setText(null); //vymaže text v poli meno
+            String Meno = MenoTextField.getText();
+            String Priezvisko = PriezviskoTextField.getText();
+            String PrihlasMeno = PrihlasovacieMenoTextField.getText();
+            String Heslo = HesloPasswordField.getText();
+            Map<String,Object>data = new HashMap<>();
+            data.put("Meno", Meno);
+            data.put("Priezvisko", Priezvisko);
+            data.put("Prihlasovacie Meno", PrihlasMeno);
+            data.put("Heslo", Heslo);
+            ConnectionFirebase.InsertData("ucty",PrihlasMeno,data);
 
-            Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
-            Domov.show(); // Zobrazí Jframe(Domov)
+            Prihlasenie Prihlasenie = new Prihlasenie(); // Zadefinuje Jframe(Prihlasenie)
+            Prihlasenie.show(); // Zobrazí Jframe(Prihlasenie)
             dispose(); // Zatvorí povodný Jframe
-        }
 
-    }//GEN-LAST:event_PrihlasitButtonActionPerformed
+    }//GEN-LAST:event_RegistrovatButtonActionPerformed
 
     private void PriezviskoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PriezviskoTextFieldActionPerformed
         // TODO add your handling code here:
@@ -255,9 +265,9 @@ public class NovyUcet extends javax.swing.JFrame {
     private javax.swing.JTextField PriezviskoTextField;
     private javax.swing.JLabel PrihlasenieLabel;
     private javax.swing.JPanel PrihlaseniePanel;
-    private javax.swing.JButton PrihlasitButton;
     private javax.swing.JLabel PrihlasovacieMenoLabel;
     private javax.swing.JTextField PrihlasovacieMenoTextField;
+    private javax.swing.JButton RegistrovatButton;
     private javax.swing.JButton UzMamUcetButton;
     private javax.swing.JButton ZrusitButton;
     // End of variables declaration//GEN-END:variables
