@@ -1,11 +1,24 @@
 package obchodik2;
 
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 public class Kosik extends javax.swing.JFrame {
+    
+    Connection connP;
+    ResultSet rs;
+    PreparedStatement pst;
+    
     /**
      * Creates new form NewJFrame1
      */
     public Kosik() {
         initComponents();
+        connP = produktyconnect.ConnectDb();
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -505,7 +518,7 @@ public class Kosik extends javax.swing.JFrame {
     private javax.swing.JScrollPane ProduktyScrollPane;
     private javax.swing.JLabel ShopLabel;
     private javax.swing.JSeparator ShopSeparator;
-    private javax.swing.JTable TabulkaProduktovTable;
+    public static javax.swing.JTable TabulkaProduktovTable;
     private javax.swing.JLabel UhraditLabel;
     private javax.swing.JTextField UhraditTextField;
     private javax.swing.JButton domovButton;

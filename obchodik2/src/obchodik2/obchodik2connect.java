@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
 
 public class obchodik2connect {
     
-    Connection conn;
+    Connection connO;
     
     public static Connection ConnectDb(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/produkty", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/obchodik2", "root", "");
             return conn;
             
         }catch(Exception e){

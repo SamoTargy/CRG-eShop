@@ -1,13 +1,25 @@
 package obchodik2;
 
 
+import com.mysql.cj.xdevapi.Statement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class Produkty extends javax.swing.JFrame {
 
+    Connection connP =null;
+    ResultSet rs = null;
+    PreparedStatement pst = null;
     
     public Produkty() {
         initComponents();
+        connP = produktyconnect.ConnectDb();
+        
         
         ImageIcon imageProdukt1 = new ImageIcon("img/B1.png"); //
         ImageIcon imageProdukt2 = new ImageIcon("img/B2.png"); //
@@ -850,7 +862,40 @@ public class Produkty extends javax.swing.JFrame {
     }//GEN-LAST:event_koniecButtonActionPerformed
 
     private void Kupit1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit1ButtonActionPerformed
-        // TODO add your handling code here:
+        
+        String sql1 = "select * from kuraciabageta";
+        
+        try{
+                        
+            
+            java.sql.Statement st = connP.createStatement();
+            // mysql_query
+            ResultSet rss = st.executeQuery(sql1);
+            
+            while(rss.next()){
+                // data will be added until finish
+              String NazovProduktu = rss.getString("NazovProduktu");
+              String IDProduktu = String.value of(rss.getInt("IDProduktu"));
+              String SCenaProduktu = String.value of(rss.getInt("CenaProduktu"));
+              String Pocet = String.value of(rss.getInt("Pocet"));
+              
+                      
+            String tbData[] = {NazovProduktu,IDProduktu,CenaProduktu,Pocet};
+            DefaultTableModel tblModel = (DefaultTableModel)Kosik.TabulkaProduktovTable.getModel();
+            // add string array data into jtable.
+            Kosik.TabulkaProduktovTable.addRow(tbData);
+            
+            }
+            rss.close();
+            pst.close();     
+            connP.close();
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
     }//GEN-LAST:event_Kupit1ButtonActionPerformed
 
     /**

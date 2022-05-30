@@ -10,14 +10,14 @@ public class NovyUcet extends javax.swing.JFrame {
      * Creates new form NovyUcet
      */
     
-    Connection conn;
+    Connection connO;
     ResultSet rs;
     PreparedStatement pst;
     
     
     public NovyUcet() {
         initComponents();
-        conn = obchodik2connect.ConnectDb();
+        connO = obchodik2connect.ConnectDb();
     }
     
     @SuppressWarnings("unchecked")
@@ -200,24 +200,34 @@ public class NovyUcet extends javax.swing.JFrame {
 
         
                 try{
-            String sql = "insert into ucty (Meno, Priezvisko, PrihlasMeno, Heslo) values (?,?,?,?)";
-            pst = conn.prepareStatement(sql);
-            pst.setString(1, MenoTextField.getText());
-            pst.setString(2, PriezviskoTextField.getText());
-            pst.setString(3, PrihlasovacieMenoTextField.getText());
-            pst.setString(4, HesloPasswordField.getText());
+            String sql2 = "select * from ucty where PrihlasMeno=?";
+            String sql1 = "insert into ucty (Meno, Priezvisko, PrihlasMeno, Heslo) values (?,?,?,?)";
             
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "<html><font face='Imprint MT Shadow' size='12' color='red'>Ucet bol vytvorený......................");
-            pst.close();
+            pst = connO.prepareStatement(sql2);
+            pst.setString(1, PrihlasovacieMenoTextField.getText());
+            rs = pst.executeQuery();
+            
+            if(rs.next()){               
+                JOptionPane.showMessageDialog(this,"Učet s týmitoprohlasovacím menom už existuje.","LOGIN_ERROR",JOptionPane.ERROR_MESSAGE); //Error message
+            }else{
+                rs.close();
+                pst.close();
+            
+                pst = connO.prepareStatement(sql1);
+                pst.setString(1, MenoTextField.getText());
+                pst.setString(2, PriezviskoTextField.getText());
+                pst.setString(3, PrihlasovacieMenoTextField.getText());
+                pst.setString(4, HesloPasswordField.getText());
+                
+                pst.execute();
+                JOptionPane.showMessageDialog(null, "<html><font face='Imprint MT Shadow' size='12' color='red'>Ucet bol vytvorený");
+                pst.close();
+            }
             
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
         }
         
-            Prihlasenie Prihlasenie = new Prihlasenie(); // Zadefinuje Jframe(Prihlasenie)
-            Prihlasenie.show(); // Zobrazí Jframe(Prihlasenie)
-            dispose(); // Zatvorí povodný Jframe
 
     }//GEN-LAST:event_RegistrovatButtonActionPerformed
 

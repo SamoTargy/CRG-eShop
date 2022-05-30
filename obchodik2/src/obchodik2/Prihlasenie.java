@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 public class Prihlasenie extends javax.swing.JFrame {
     
-    Connection conn;
+    Connection connO;
     ResultSet rs;
     PreparedStatement pst;
     /**
@@ -19,7 +19,7 @@ public class Prihlasenie extends javax.swing.JFrame {
      */
     public Prihlasenie() {
         initComponents();
-        conn = obchodik2connect.ConnectDb();
+        connO = obchodik2connect.ConnectDb();
     }
 
     @SuppressWarnings("unchecked")
@@ -189,7 +189,7 @@ public class Prihlasenie extends javax.swing.JFrame {
         String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    
         
         try{
-            pst = conn.prepareStatement(sql1);
+            pst = connO.prepareStatement(sql1);
             pst.setString(1, MenoTextField.getText());
             pst.setString(2, HesloPasswordField.getText());
             rs = pst.executeQuery();
@@ -204,7 +204,7 @@ public class Prihlasenie extends javax.swing.JFrame {
             
             }
             else{
-                pst = conn.prepareStatement(sql2);             
+                pst = connO.prepareStatement(sql2);             
                 pst.setString(1, MenoTextField.getText());
                 pst.setString(2, HesloPasswordField.getText());
                 rs = pst.executeQuery();            
