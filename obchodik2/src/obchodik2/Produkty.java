@@ -12,14 +12,14 @@ import javax.swing.table.DefaultTableModel;
 
 public class Produkty extends javax.swing.JFrame {
 
-    Connection connP =null;
-    ResultSet rs = null;
-    PreparedStatement pst = null;
+    Connection connP = null;        //
+    ResultSet rs = null;            //makará pre databazu
+    PreparedStatement pst = null;   //
     
     public Produkty() {
         initComponents();
-        connP = produktyconnect.ConnectDb();
-        
+        connP = produktyconnect.ConnectDb(); //makro na prepojenie s databazov
+
         
         ImageIcon imageProdukt1 = new ImageIcon("img/B1.png"); //
         ImageIcon imageProdukt2 = new ImageIcon("img/B2.png"); //
@@ -863,30 +863,23 @@ public class Produkty extends javax.swing.JFrame {
 
     private void Kupit1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit1ButtonActionPerformed
         
-        String sql1 = "select * from kuraciabageta";
+        String sql1 = "select * from kuraciabageta"; //php kod pre databazu
         
         try{
                         
             
-            java.sql.Statement st = connP.createStatement();
-            // mysql_query
-            ResultSet rss = st.executeQuery(sql1);
+            java.sql.Statement st = connP.createStatement();     
             
-            while(rss.next()){
-                // data will be added until finish
-              String NazovProduktu = rss.getString("NazovProduktu");
-              String IDProduktu = String.value of(rss.getInt("IDProduktu"));
-              String SCenaProduktu = String.value of(rss.getInt("CenaProduktu"));
-              String Pocet = String.value of(rss.getInt("Pocet"));
-              
-                      
-            String tbData[] = {NazovProduktu,IDProduktu,CenaProduktu,Pocet};
-            DefaultTableModel tblModel = (DefaultTableModel)Kosik.TabulkaProduktovTable.getModel();
-            // add string array data into jtable.
-            Kosik.TabulkaProduktovTable.addRow(tbData);
-            
+            try (ResultSet rss = st.executeQuery(sql1)) {
+                Kosik.AddRoww(new Object[]
+                {
+                    rss.getString("NazovProduktu"),
+                    String.valueOf(rss.getInt("IDProduktu")),
+                    String.valueOf(rss.getInt("CenaProduktu")),
+                    String.valueOf(rss.getInt("Pocet"))
+                });
             }
-            rss.close();
+            
             pst.close();     
             connP.close();
             

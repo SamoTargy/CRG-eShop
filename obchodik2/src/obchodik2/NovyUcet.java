@@ -10,14 +10,14 @@ public class NovyUcet extends javax.swing.JFrame {
      * Creates new form NovyUcet
      */
     
-    Connection connO;
-    ResultSet rs;
-    PreparedStatement pst;
+    Connection connO;        //
+    ResultSet rs;            //makará pre databazu
+    PreparedStatement pst;   //
     
     
     public NovyUcet() {
         initComponents();
-        connO = obchodik2connect.ConnectDb();
+        connO = obchodik2connect.ConnectDb(); //makro na prepojenie s databazov
     }
     
     @SuppressWarnings("unchecked")
@@ -200,12 +200,12 @@ public class NovyUcet extends javax.swing.JFrame {
 
         
                 try{
-            String sql2 = "select * from ucty where PrihlasMeno=?";
-            String sql1 = "insert into ucty (Meno, Priezvisko, PrihlasMeno, Heslo) values (?,?,?,?)";
+            String sql2 = "select * from ucty where PrihlasMeno=?";                                     // php kod pre databazu
+            String sql1 = "insert into ucty (Meno, Priezvisko, PrihlasMeno, Heslo) values (?,?,?,?)";   //
             
-            pst = connO.prepareStatement(sql2);
-            pst.setString(1, PrihlasovacieMenoTextField.getText());
-            rs = pst.executeQuery();
+            pst = connO.prepareStatement(sql2);                      //
+            pst.setString(1, PrihlasovacieMenoTextField.getText());  // vkladanie php kodu do databazy a zapisovanie vysledku
+            rs = pst.executeQuery();                                 //
             
             if(rs.next()){               
                 JOptionPane.showMessageDialog(this,"Učet s týmitoprohlasovacím menom už existuje.","LOGIN_ERROR",JOptionPane.ERROR_MESSAGE); //Error message
@@ -213,15 +213,15 @@ public class NovyUcet extends javax.swing.JFrame {
                 rs.close();
                 pst.close();
             
-                pst = connO.prepareStatement(sql1);
-                pst.setString(1, MenoTextField.getText());
-                pst.setString(2, PriezviskoTextField.getText());
-                pst.setString(3, PrihlasovacieMenoTextField.getText());
-                pst.setString(4, HesloPasswordField.getText());
-                
-                pst.execute();
-                JOptionPane.showMessageDialog(null, "<html><font face='Imprint MT Shadow' size='12' color='red'>Ucet bol vytvorený");
-                pst.close();
+                pst = connO.prepareStatement(sql1);                          //
+                pst.setString(1, MenoTextField.getText());                   //
+                pst.setString(2, PriezviskoTextField.getText());             //
+                pst.setString(3, PrihlasovacieMenoTextField.getText());      // vkladanie dat do databazy a nasledna reakcia
+                pst.setString(4, HesloPasswordField.getText());              //
+                                                                             //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "Ucet bol vytvorený");   //
+                pst.close();                                                 //
             }
             
         }catch(Exception e){

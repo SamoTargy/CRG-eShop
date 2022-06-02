@@ -6,19 +6,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class Kosik extends javax.swing.JFrame {
     
-    Connection connP;
-    ResultSet rs;
-    PreparedStatement pst;
+    Connection connP;        //
+    ResultSet rs;            //makará pre databazu
+    PreparedStatement pst;   //
     
     /**
      * Creates new form NewJFrame1
      */
     public Kosik() {
         initComponents();
-        connP = produktyconnect.ConnectDb();
+        connP = produktyconnect.ConnectDb();    //makro na prepojenie s databazov
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -465,6 +466,14 @@ public class Kosik extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UhraditTextFieldActionPerformed
 
+    public static void AddRoww(Object [] dataRow)
+    {
+        DefaultTableModel tblModel = (DefaultTableModel)TabulkaProduktovTable.getModel();   // vpisanie premennej do tabulky
+        tblModel.addRow(dataRow);                                                           //
+    }
+    
+    
+    
     /**
      * @param args the command line arguments
      */

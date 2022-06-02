@@ -11,15 +11,15 @@ import javax.swing.JOptionPane;
 
 public class Prihlasenie extends javax.swing.JFrame {
     
-    Connection connO;
-    ResultSet rs;
-    PreparedStatement pst;
+    Connection connO;        //
+    ResultSet rs;            //makará pre databazu
+    PreparedStatement pst;   //
     /**
      * Creates new form Prihlásenie
      */
     public Prihlasenie() {
         initComponents();
-        connO = obchodik2connect.ConnectDb();
+        connO = obchodik2connect.ConnectDb();  //makro na prepojenie s databazovS
     }
 
     @SuppressWarnings("unchecked")
@@ -185,13 +185,13 @@ public class Prihlasenie extends javax.swing.JFrame {
 
     private void PrihlasitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrihlasitButtonActionPerformed
         
-        String sql1 = "select * from ucty where Meno=? and Heslo=?";
-        String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    
+        String sql1 = "select * from ucty where Meno=? and Heslo=?";         //
+        String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    // php kod pre databazu
         
         try{
-            pst = connO.prepareStatement(sql1);
-            pst.setString(1, MenoTextField.getText());
-            pst.setString(2, HesloPasswordField.getText());
+            pst = connO.prepareStatement(sql1);               // vkladanie php kodu do databazy
+            pst.setString(1, MenoTextField.getText());        // nacitanie a kontorla mena a heslo (admin
+            pst.setString(2, HesloPasswordField.getText());   //
             rs = pst.executeQuery();
             
             if(rs.next()){
@@ -204,9 +204,9 @@ public class Prihlasenie extends javax.swing.JFrame {
             
             }
             else{
-                pst = connO.prepareStatement(sql2);             
-                pst.setString(1, MenoTextField.getText());
-                pst.setString(2, HesloPasswordField.getText());
+                pst = connO.prepareStatement(sql2);             // vkladanie php kodu do databazy
+                pst.setString(1, MenoTextField.getText());      // nacitanie a kontorla mena a heslo (admin
+                pst.setString(2, HesloPasswordField.getText()); //
                 rs = pst.executeQuery();            
 
                 if(rs.next()){
