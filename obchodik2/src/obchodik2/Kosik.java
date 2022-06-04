@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class Kosik extends javax.swing.JFrame {
     
-    Connection connP;        //
+    Connection connO;        //
     ResultSet rs;            //makará pre databazu
     PreparedStatement pst;   //
     
@@ -19,7 +19,10 @@ public class Kosik extends javax.swing.JFrame {
      */
     public Kosik() {
         initComponents();
-        connP = produktyconnect.ConnectDb();    //makro na prepojenie s databazov
+        connO = obchodik2connect.ConnectDb();    //makro na prepojenie s databazov
+        
+
+        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -451,7 +454,21 @@ public class Kosik extends javax.swing.JFrame {
     }//GEN-LAST:event_koniecButtonActionPerformed
 
     private void PocetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PocetButtonActionPerformed
-        // TODO add your handling code here:
+            try{
+            String sql = "select * from kosik";   // php kod pre databazu
+            
+            pst = connO.prepareStatement(sql);                      //
+            rs = pst.executeQuery();                                 //
+            DefaultTableModel model = (DefaultTableModel)TabulkaProduktovTable.getModel();
+            model.setRowCount(0);
+            
+            while(rs.next()){               
+                model.addRow(new String[]{rs.getString(1), String.valueOf(rs.getInt(2)), String.valueOf(rs.getInt(3)), String.valueOf(rs.getInt(4)), String.valueOf(rs.getInt(5))});
+            }
+
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_PocetButtonActionPerformed
 
     private void PokracovatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PokracovatButtonActionPerformed
@@ -466,11 +483,6 @@ public class Kosik extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UhraditTextFieldActionPerformed
 
-    public static void AddRoww(Object [] dataRow)
-    {
-        DefaultTableModel tblModel = (DefaultTableModel)TabulkaProduktovTable.getModel();   // vpisanie premennej do tabulky
-        tblModel.addRow(dataRow);                                                           //
-    }
     
     
     

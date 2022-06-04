@@ -1,12 +1,53 @@
 package obchodik2;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
+
 public class Ucet extends javax.swing.JFrame {
+    
+    Connection connO;        //
+    ResultSet rs;            //makará pre databazu
+    PreparedStatement pst;   //
+    
     public Ucet() {
         initComponents();
+        connO = obchodik2connect.ConnectDb();  //makro na prepojenie s databazovS
         
         ImageIcon imagePerson = new ImageIcon("img/person.png");// Vytvorí ImageIcon do ktorého sa následne uloží obrázok sa následne uloží obrázok 
         PersonLabel.setIcon(imagePerson); // Nastavý do bjektu Label ImageIcon(obrázok)  
+        
+        Ucet myObj = new Ucet();
+        
+        String sql1 = "select * from ucty where PrihlasMeno=?";    // php kod pre databazu
+        
+        try {
+            pst = connO.prepareStatement(sql1);         // vkladanie php kodu do databazy
+            Ucet ucet = new Ucet();
+            pst.setString(1, Prihlasenie.ucet);    // nacitanie a kontorla prihlasovacieho mena
+            rs = pst.executeQuery();
+            
+            if (rs.next()){
+                String Meno = rs.getString("Meno");
+                String Priezvisko = rs.getString("Priezvisko");
+                String PrihlasMeno = rs.getString("PrihlasMeno");
+                String Heslo = rs.getString("Meno");   
+                
+                MenoTextField.setText(Meno);
+                PriezviskoTextField.setText(Priezvisko);
+                PrihlasovacieMenoTextField.setText(PrihlasMeno);
+                HesloTextField.setText(Heslo);
+            }
+        
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -34,7 +75,7 @@ public class Ucet extends javax.swing.JFrame {
         PriezviskoLabel = new javax.swing.JLabel();
         PriezviskoTextField = new javax.swing.JTextField();
         PrihlasovacieMenoLabel = new javax.swing.JLabel();
-        PrihlasovacieMenoTextField1 = new javax.swing.JTextField();
+        PrihlasovacieMenoTextField = new javax.swing.JTextField();
         HesloTextField = new javax.swing.JTextField();
         HesloLabel = new javax.swing.JLabel();
         PersonLabel = new javax.swing.JLabel();
@@ -242,6 +283,12 @@ public class Ucet extends javax.swing.JFrame {
         MenoLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
         MenoLabel.setText("Meno:");
 
+        MenoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenoTextFieldActionPerformed(evt);
+            }
+        });
+
         PriezviskoLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
         PriezviskoLabel.setText("Priezvisko:");
 
@@ -253,6 +300,12 @@ public class Ucet extends javax.swing.JFrame {
 
         PrihlasovacieMenoLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
         PrihlasovacieMenoLabel.setText("Prihlas. Meno:");
+
+        PrihlasovacieMenoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PrihlasovacieMenoTextFieldActionPerformed(evt);
+            }
+        });
 
         HesloLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
         HesloLabel.setText("Heslo:");
@@ -307,7 +360,7 @@ public class Ucet extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(PrihlasovacieMenoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(PrihlasovacieMenoTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(PrihlasovacieMenoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(HesloLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -344,7 +397,7 @@ public class Ucet extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PrihlasovacieMenoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PrihlasovacieMenoTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(PrihlasovacieMenoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(HesloLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -365,7 +418,7 @@ public class Ucet extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+                    
     private void koniecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_koniecButtonActionPerformed
 
         System.exit(0); // Ukončí všetky úkony a zatvorí program  
@@ -421,6 +474,14 @@ public class Ucet extends javax.swing.JFrame {
         dispose(); // Zatvoí povodný Jframe
     }//GEN-LAST:event_OdhlasitSaButton1ActionPerformed
 
+    private void MenoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MenoTextFieldActionPerformed
+
+    private void PrihlasovacieMenoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrihlasovacieMenoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PrihlasovacieMenoTextFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -469,7 +530,7 @@ public class Ucet extends javax.swing.JFrame {
     public javax.swing.JLabel PriezviskoLabel;
     public javax.swing.JTextField PriezviskoTextField;
     public javax.swing.JLabel PrihlasovacieMenoLabel;
-    public javax.swing.JTextField PrihlasovacieMenoTextField1;
+    public javax.swing.JTextField PrihlasovacieMenoTextField;
     public javax.swing.JLabel ShopLabel;
     public javax.swing.JSeparator ShopSeparator;
     public javax.swing.JLabel UcetLabel;

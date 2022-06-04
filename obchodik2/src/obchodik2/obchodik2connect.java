@@ -19,7 +19,7 @@ public class obchodik2connect {
     
     public static Connection ConnectDb(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/obchodik2", "root", "");
             return conn;
             

@@ -10,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 
 public class Prihlasenie extends javax.swing.JFrame {
-    
+  
     Connection connO;        //
     ResultSet rs;            //makará pre databazu
     PreparedStatement pst;   //
@@ -21,7 +21,9 @@ public class Prihlasenie extends javax.swing.JFrame {
         initComponents();
         connO = obchodik2connect.ConnectDb();  //makro na prepojenie s databazovS
     }
-
+    
+        public static String ucet = null;
+        
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -185,18 +187,29 @@ public class Prihlasenie extends javax.swing.JFrame {
 
     private void PrihlasitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrihlasitButtonActionPerformed
         
+        ucet = MenoTextField.getText();   
+        System.out.println(ucet);
+        
         String sql1 = "select * from ucty where Meno=? and Heslo=?";         //
         String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    // php kod pre databazu
         
-        try{
+        try {
             pst = connO.prepareStatement(sql1);               // vkladanie php kodu do databazy
             pst.setString(1, MenoTextField.getText());        // nacitanie a kontorla mena a heslo (admin
             pst.setString(2, HesloPasswordField.getText());   //
             rs = pst.executeQuery();
             
             if(rs.next()){
+  
+                pst = connO.prepareStatement(sql1);             // vkladanie php kodu do databazy
+                pst.setString(1, MenoTextField.getText());      // nacitanie a kontorla mena a heslo (admin
+                pst.setString(2, HesloPasswordField.getText()); //
+                rs = pst.executeQuery();                 
                 rs.close();
                 pst.close();
+                    
+                Prihlasenie.ucet = MenoTextField.getText();
+                System.out.println(ucet);
                 
             Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
             Domov.show(); // Zobrazí Jframe(Domov)
@@ -232,7 +245,7 @@ public class Prihlasenie extends javax.swing.JFrame {
         }catch(Exception e){
         }
                 }
-   
+      
     }//GEN-LAST:event_PrihlasitButtonActionPerformed
 
     private void ZrusitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZrusitButtonActionPerformed
@@ -249,6 +262,9 @@ public class Prihlasenie extends javax.swing.JFrame {
             
     }//GEN-LAST:event_NemamUcetButtonActionPerformed
 
+    
+
+    
     /**
      * @param args the command line arguments
      */

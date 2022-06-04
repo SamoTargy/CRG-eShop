@@ -19,7 +19,7 @@ public class produktyconnect {
     
     public static Connection ConnectDb(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/produkty", "root", "");
             return conn;
             
