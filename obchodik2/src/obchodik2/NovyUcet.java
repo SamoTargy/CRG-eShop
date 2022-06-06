@@ -212,7 +212,7 @@ public class NovyUcet extends javax.swing.JFrame {
             }else{
                 rs.close();
                 pst.close();
-            
+                
                 pst = connO.prepareStatement(sql1);                          //
                 pst.setString(1, MenoTextField.getText());                   //
                 pst.setString(2, PriezviskoTextField.getText());             //

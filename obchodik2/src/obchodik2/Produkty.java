@@ -12,13 +12,13 @@ import javax.swing.table.DefaultTableModel;
 
 public class Produkty extends javax.swing.JFrame {
 
-    Connection connP = null;        //
+    Connection connO = null;        //
     ResultSet rs = null;            //makará pre databazu
     PreparedStatement pst = null;   //
     
     public Produkty() {
         initComponents();
-        connP = produktyconnect.ConnectDb(); //makro na prepojenie s databazov
+        connO = bchodik2connect.ConnectDb(); //makro na prepojenie s databazov
 
         
         ImageIcon imageProdukt1 = new ImageIcon("img/B1.png"); //
@@ -863,25 +863,17 @@ public class Produkty extends javax.swing.JFrame {
 
     private void Kupit1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit1ButtonActionPerformed
         
-        String sql1 = "select * from kuraciabageta"; //php kod pre databazu
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet) values (?)"; //php kod pre databazu
         
-        try{
-                        
-            
-            java.sql.Statement st = connP.createStatement();     
-            
-            try (ResultSet rss = st.executeQuery(sql1)) {
-                Kosik.AddRoww(new Object[]
-                {
-                    rss.getString("NazovProduktu"),
-                    String.valueOf(rss.getInt("IDProduktu")),
-                    String.valueOf(rss.getInt("CenaProduktu")),
-                    String.valueOf(rss.getInt("Pocet"))
-                });
-            }
-            
-            pst.close();     
-            connP.close();
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Kuracia bagetka");             //
+                     //                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+                rs.close();
             
         }
         catch(Exception e)
