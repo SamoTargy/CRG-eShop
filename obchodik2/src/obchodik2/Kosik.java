@@ -20,27 +20,61 @@ public class Kosik extends javax.swing.JFrame {
      */
     public Kosik() {
         initComponents();
-        connO = obchodik2connect.ConnectDb();    //makro na prepojenie s databazov
-        
-        
-        String sql1 = "select * from kosik"; //php kod pre databazu
-        
-        try{ 
+        connO = obchodik2connect.ConnectDb();    //makro na prepojenie s databazov  
+            
+            String sql1 = "select * from kosik"; //php kod pre databazu
+            String sql3 = "select count(*) from kosik"; //php kod pre databazu
+            String sql4 = "select sum(CenaProduktu) from kosik"; //php kod pre databazu
+            
+            try{ 
 
-                pst = connO.prepareStatement(sql1);     
+                    pst = connO.prepareStatement(sql1);     
+                    rs = pst.executeQuery();
+                    DefaultTableModel model = (DefaultTableModel)TabulkaProduktovTable.getModel();
+                    model.setRowCount(0);                    
+                    while(rs.next()){
+                        model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});
+                        TabulkaProduktovTable.setEnabled(false);
+                    }
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
+               
+            try{ 
+
+                pst = connO.prepareStatement(sql3);     
                 rs = pst.executeQuery();
-                DefaultTableModel model = (DefaultTableModel)TabulkaProduktovTable.getModel();
-                model.setRowCount(0);
-                while(rs.next()){
-                    model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});    
-                }
-        }
-        catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
-              
+                rs.next();
+                int count = rs.getInt(1);
+                String Pocet = String.valueOf(count);
+                PocetProduktovTextField.setText(Pocet);
+                PocetProduktovTextField.setEditable(false);
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
         
+            
+            try{ 
+
+                pst = connO.prepareStatement(sql4);     
+                rs = pst.executeQuery();
+                rs.next();
+                int countt = rs.getInt(1);
+                String Cena = String.valueOf(countt);
+                UhraditTextField.setText(Cena + "€");
+                UhraditTextField.setEditable(false);
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
+            
+            
+            
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -74,8 +108,6 @@ public class Kosik extends javax.swing.JFrame {
         UhraditLabel = new javax.swing.JLabel();
         UhraditTextField = new javax.swing.JTextField();
         OdstranitButton = new javax.swing.JButton();
-        PocetButton = new javax.swing.JButton();
-        PocetSpinner = new javax.swing.JSpinner();
         PokracovatButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -281,6 +313,13 @@ public class Kosik extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(TabulkaProduktovTable);
+        if (TabulkaProduktovTable.getColumnModel().getColumnCount() > 0) {
+            TabulkaProduktovTable.getColumnModel().getColumn(0).setHeaderValue("Názov produkt");
+            TabulkaProduktovTable.getColumnModel().getColumn(1).setHeaderValue("Id produktu");
+            TabulkaProduktovTable.getColumnModel().getColumn(2).setHeaderValue("Cena Produktu");
+            TabulkaProduktovTable.getColumnModel().getColumn(3).setHeaderValue("Počet");
+            TabulkaProduktovTable.getColumnModel().getColumn(4).setHeaderValue("Cena celkovo");
+        }
         TabulkaProduktovTable.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout PanellSKosikomPanelLayout = new javax.swing.GroupLayout(PanellSKosikomPanel);
@@ -325,13 +364,9 @@ public class Kosik extends javax.swing.JFrame {
         OdstranitButton.setBackground(new java.awt.Color(40, 130, 255));
         OdstranitButton.setText("Odstrániť");
         OdstranitButton.setBorder(null);
-
-        PocetButton.setBackground(new java.awt.Color(40, 130, 255));
-        PocetButton.setText("Zmeniť Počet");
-        PocetButton.setBorder(null);
-        PocetButton.addActionListener(new java.awt.event.ActionListener() {
+        OdstranitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PocetButtonActionPerformed(evt);
+                OdstranitButtonActionPerformed(evt);
             }
         });
 
@@ -377,11 +412,7 @@ public class Kosik extends javax.swing.JFrame {
                                     .addComponent(UhraditTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(pozadiePanelLayout.createSequentialGroup()
                                 .addComponent(OdstranitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(64, 64, 64)
-                                .addComponent(PocetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(PocetSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(290, 290, 290)
+                                .addGap(570, 570, 570)
                                 .addComponent(PokracovatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -412,8 +443,6 @@ public class Kosik extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pozadiePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(OdstranitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PocetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PocetSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PokracovatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
         );
@@ -422,7 +451,7 @@ public class Kosik extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pozadiePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pozadiePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -479,21 +508,115 @@ public class Kosik extends javax.swing.JFrame {
         
     }//GEN-LAST:event_koniecButtonActionPerformed
 
-    private void PocetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PocetButtonActionPerformed
-
-    }//GEN-LAST:event_PocetButtonActionPerformed
-
     private void PokracovatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PokracovatButtonActionPerformed
-        // TODO add your handling code here:
+            
+            String sql2 = "TRUNCATE TABLE `kosik`;"; //php kod pre databazu
+            String sql5 = "select sum(CenaProduktu) from kosik"; //php kod pre databazu
+            String sql6 = "insert into zisky (zisk) values (?)";
+        
+            try{ 
+
+                pst = connO.prepareStatement(sql5);     
+                rs = pst.executeQuery();
+                rs.next();                              //nacita zisky z tabulky
+                int count = rs.getInt(1);
+                String Pocet = String.valueOf(count); 
+                
+                
+                pst = connO.prepareStatement(sql6);  
+                pst.setString(1, Pocet);              //zapise zisky do databazy zisky                                                                             //
+                pst.execute(); 
+                rs.close();
+                pst.close();
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
+            
+        try{ 
+            pst = connO.prepareStatement(sql2);     
+            pst.executeUpdate(sql2);
+            pst.close();                              //vysypanie tabulky
+        }                                             
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+            
     }//GEN-LAST:event_PokracovatButtonActionPerformed
 
     private void PocetProduktovTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PocetProduktovTextFieldActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_PocetProduktovTextFieldActionPerformed
 
     private void UhraditTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UhraditTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_UhraditTextFieldActionPerformed
+
+    private void OdstranitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OdstranitButtonActionPerformed
+         
+        String sql1 = "select * from kosik"; //php kod pre databazu
+        String sql2 = "TRUNCATE TABLE `kosik`;"; //php kod pre databazu
+        String sql3 = "select count(*) from kosik"; //php kod pre databazu
+        String sql4 = "select sum(CenaProduktu) from kosik"; //php kod pre databazu
+        
+        try{ 
+            pst = connO.prepareStatement(sql2);     
+            pst.executeUpdate(sql2);
+            pst.close();                              //vysypanie tabulky
+        }                                             
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+
+            try{ 
+
+                    pst = connO.prepareStatement(sql1);     
+                    rs = pst.executeQuery();
+                    DefaultTableModel model = (DefaultTableModel)TabulkaProduktovTable.getModel();
+                    model.setRowCount(0);
+                    while(rs.next()){                                                                                       //prepísanie hodnôt tabulky na prazdnu
+                        model.addRow(new String[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)});
+                        TabulkaProduktovTable.setEnabled(false);
+                    }
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
+                   try{ 
+
+                pst = connO.prepareStatement(sql3);     
+                rs = pst.executeQuery();
+                rs.next();
+                int count = rs.getInt(1);
+                String Pocet = String.valueOf(count);                          //pocet produktov v tabuke
+                PocetProduktovTextField.setText(Pocet);
+                PocetProduktovTextField.setEditable(false);
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
+                   
+            try{ 
+
+                pst = connO.prepareStatement(sql4);     
+                rs = pst.executeQuery();
+                rs.next();
+                int countt = rs.getInt(1);
+                String Cena = String.valueOf(countt);                        //cena produktov v tabule
+                UhraditTextField.setText(Cena + "€");
+                UhraditTextField.setEditable(false);
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }       
+    }//GEN-LAST:event_OdstranitButtonActionPerformed
 
     
     
@@ -543,10 +666,8 @@ public class Kosik extends javax.swing.JFrame {
     private javax.swing.JTextField InformacieTextField;
     private javax.swing.JButton OdstranitButton;
     private javax.swing.JPanel PanellSKosikomPanel;
-    private javax.swing.JButton PocetButton;
     private javax.swing.JLabel PocetProduktovLabel;
     private javax.swing.JTextField PocetProduktovTextField;
-    private javax.swing.JSpinner PocetSpinner;
     private javax.swing.JButton PokracovatButton;
     private javax.swing.JScrollPane ProduktyScrollPane;
     private javax.swing.JLabel ShopLabel;

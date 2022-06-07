@@ -20,34 +20,8 @@ public class Ucet extends javax.swing.JFrame {
         initComponents();
         connO = obchodik2connect.ConnectDb();  //makro na prepojenie s databazovS
         
-        ImageIcon imagePerson = new ImageIcon("img/person.png");// Vytvorí ImageIcon do ktorého sa následne uloží obrázok sa následne uloží obrázok 
-        PersonLabel.setIcon(imagePerson); // Nastavý do bjektu Label ImageIcon(obrázok)  
-        
-        Ucet myObj = new Ucet();
-        
-        String sql1 = "select * from ucty where PrihlasMeno=?";    // php kod pre databazu
-        
-        try {
-            pst = connO.prepareStatement(sql1);         // vkladanie php kodu do databazy
-            Ucet ucet = new Ucet();
-            pst.setString(1, Prihlasenie.ucet);    // nacitanie a kontorla prihlasovacieho mena
-            rs = pst.executeQuery();
-            
-            if (rs.next()){
-                String Meno = rs.getString("Meno");
-                String Priezvisko = rs.getString("Priezvisko");
-                String PrihlasMeno = rs.getString("PrihlasMeno");
-                String Heslo = rs.getString("Meno");   
-                
-                MenoTextField.setText(Meno);
-                PriezviskoTextField.setText(Priezvisko);
-                PrihlasovacieMenoTextField.setText(PrihlasMeno);
-                HesloTextField.setText(Heslo);
-            }
-        
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
+        ImageIcon imagePerson = new ImageIcon("img/person.png");//
+        PersonLabel.setIcon(imagePerson); //
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

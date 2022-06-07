@@ -833,10 +833,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Debrecinska bagetka");             //
-                pst.setString(2, "2");
+                pst.setString(2, "002");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -857,10 +857,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Debrecinska bagetka s chilli");             //
-                pst.setString(2, "2");
+                pst.setString(2, "006");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -881,10 +881,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Paliva bagetka");             //
-                pst.setString(2, "2");
+                pst.setString(2, "003");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -898,7 +898,26 @@ public class Produkty extends javax.swing.JFrame {
     }//GEN-LAST:event_Kupit3ButtonActionPerformed
 
     private void Kupit11ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit11ButtonActionPerformed
-       
+               
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Pecena slanina sendvic");             //
+                pst.setString(2, "011");
+                pst.setString(3, "2");
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_Kupit11ButtonActionPerformed
 
     private void Kupit4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit4ButtonActionPerformed
@@ -909,10 +928,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Pecena slaninka sendvic");             //
-                pst.setString(2, "2");
+                pst.setString(2, "004");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -979,10 +998,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Kuracia bagetka");             //
-                pst.setString(2, "2");
+                pst.setString(2, "001");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -1003,10 +1022,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Bavorska bagetka");             //
-                pst.setString(2, "2");
+                pst.setString(2, "005");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -1027,10 +1046,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Raznici bagetka");             //
-                pst.setString(2, "2");
+                pst.setString(2, "007");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -1051,10 +1070,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Parizska bagetka");             //
-                pst.setString(2, "2");
+                pst.setString(2, "008");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -1075,10 +1094,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Tuniakovy sendvic");             //
-                pst.setString(2, "2");
+                pst.setString(2, "009");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -1099,10 +1118,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Sunkovy sendvic");             //
-                pst.setString(2, "2");
+                pst.setString(2, "010");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
@@ -1123,10 +1142,10 @@ public class Produkty extends javax.swing.JFrame {
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Zaudena sunka sendvic");             //
-                pst.setString(2, "2");
+                pst.setString(2, "012");
                 pst.setString(3, "2");
-                pst.setString(4, "2");
-                pst.setString(5, "0");                                                            //
+                pst.setString(4, "1");
+                pst.setString(5, "2");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     

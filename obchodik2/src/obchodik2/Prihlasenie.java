@@ -21,9 +21,7 @@ public class Prihlasenie extends javax.swing.JFrame {
         initComponents();
         connO = obchodik2connect.ConnectDb();  //makro na prepojenie s databazovS
     }
-    
-        public static String ucet = null;
-        
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -186,9 +184,7 @@ public class Prihlasenie extends javax.swing.JFrame {
     }//GEN-LAST:event_HesloPasswordFieldActionPerformed
 
     private void PrihlasitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrihlasitButtonActionPerformed
-        
-        ucet = MenoTextField.getText();   
-        System.out.println(ucet);
+
         
         String sql1 = "select * from ucty where Meno=? and Heslo=?";         //
         String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    // php kod pre databazu
@@ -208,8 +204,6 @@ public class Prihlasenie extends javax.swing.JFrame {
                 rs.close();
                 pst.close();
                     
-                Prihlasenie.ucet = MenoTextField.getText();
-                System.out.println(ucet);
                 
             Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
             Domov.show(); // Zobrazí Jframe(Domov)

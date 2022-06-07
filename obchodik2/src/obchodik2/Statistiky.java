@@ -1,11 +1,60 @@
 package obchodik2;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JOptionPane;
+
 public class Statistiky extends javax.swing.JFrame {
+    
+    Connection connO;        //
+    ResultSet rs;            //makará pre databazu
+    PreparedStatement pst;   //
+    
     /**
      * Creates new form Statistiky
      */
     public Statistiky() {
         initComponents();
+        connO = obchodik2connect.ConnectDb();  //makro na prepojenie s databazovS
+        
+        VystProduktyTextField.setText("12");
+        
+        
+        
+            String sql1 = "select count(*) from ucty"; //php kod pre databazu
+            String sql2 = "select sum(zisk) from zisky"; //php kod pre databazu
+      
+            try{ 
+
+                pst = connO.prepareStatement(sql1);     
+                rs = pst.executeQuery();
+                rs.next();
+                int count = rs.getInt(1);                       //pocet registrovanych uctov
+                String Ucty = String.valueOf(count);
+                RegistUzivTextField.setText(Ucty);
+                RegistUzivTextField.setEditable(false);
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
+        
+            try{ 
+
+                pst = connO.prepareStatement(sql2);     
+                rs = pst.executeQuery();
+                rs.next();
+                int countt = rs.getInt(1);
+                String Cena = String.valueOf(countt);                        //cena produktov v tabule
+                ZiskyTextField.setText(Cena + "€");
+                ZiskyTextField.setEditable(false);
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }  
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
