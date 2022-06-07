@@ -696,6 +696,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit5ButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -803,6 +806,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit7ButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -855,6 +861,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit8ButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -907,6 +916,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit9ButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -959,6 +971,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit10ButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1066,6 +1081,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Do ko&#x161;&#xed;ka"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Kupit12ButtonActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

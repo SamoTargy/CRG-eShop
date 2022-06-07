@@ -18,7 +18,7 @@ public class Produkty extends javax.swing.JFrame {
     
     public Produkty() {
         initComponents();
-        connO = bchodik2connect.ConnectDb(); //makro na prepojenie s databazov
+        connO = obchodik2connect.ConnectDb(); //makro na prepojenie s databazov
 
         
         ImageIcon imageProdukt1 = new ImageIcon("img/B1.png"); //
@@ -457,6 +457,11 @@ public class Produkty extends javax.swing.JFrame {
         PopisProduktu5Label.setText("Bavorská bagetka");
 
         Kupit5Button.setText("Do košíka");
+        Kupit5Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Kupit5ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Produkt5PanelLayout = new javax.swing.GroupLayout(Produkt5Panel);
         Produkt5Panel.setLayout(Produkt5PanelLayout);
@@ -524,6 +529,11 @@ public class Produkty extends javax.swing.JFrame {
         PopisProduktu7Label.setText("Ražniči bagetka");
 
         Kupit7Button.setText("Do košíka");
+        Kupit7Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Kupit7ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Produkt7PanelLayout = new javax.swing.GroupLayout(Produkt7Panel);
         Produkt7Panel.setLayout(Produkt7PanelLayout);
@@ -555,6 +565,11 @@ public class Produkty extends javax.swing.JFrame {
         PopisProduktu8Label.setText("Parížska bagetka");
 
         Kupit8Button.setText("Do košíka");
+        Kupit8Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Kupit8ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Produkt8PanelLayout = new javax.swing.GroupLayout(Produkt8Panel);
         Produkt8Panel.setLayout(Produkt8PanelLayout);
@@ -586,6 +601,11 @@ public class Produkty extends javax.swing.JFrame {
         PopisProduktu9Label.setText("Tuniakový sendvič");
 
         Kupit9Button.setText("Do košíka");
+        Kupit9Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Kupit9ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Produkt9PanelLayout = new javax.swing.GroupLayout(Produkt9Panel);
         Produkt9Panel.setLayout(Produkt9PanelLayout);
@@ -617,6 +637,11 @@ public class Produkty extends javax.swing.JFrame {
         PopisProduktu10Label.setText("Šunkový sendvič");
 
         Kupit10Button.setText("Do košíka");
+        Kupit10Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Kupit10ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Produkt10PanelLayout = new javax.swing.GroupLayout(Produkt10Panel);
         Produkt10Panel.setLayout(Produkt10PanelLayout);
@@ -684,6 +709,11 @@ public class Produkty extends javax.swing.JFrame {
         PopisProduktu12Label.setText("Zaúdená šunka sendvič");
 
         Kupit12Button.setText("Do košíka");
+        Kupit12Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Kupit12ButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Produkt12PanelLayout = new javax.swing.GroupLayout(Produkt12Panel);
         Produkt12Panel.setLayout(Produkt12PanelLayout);
@@ -796,15 +826,75 @@ public class Produkty extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Kupit2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit2ButtonActionPerformed
+                
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Debrecinska bagetka");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
         
     }//GEN-LAST:event_Kupit2ButtonActionPerformed
 
     private void Kupit6ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit6ButtonActionPerformed
         
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Debrecinska bagetka s chilli");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                
     }//GEN-LAST:event_Kupit6ButtonActionPerformed
 
     private void Kupit3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit3ButtonActionPerformed
         
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Paliva bagetka");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                
     }//GEN-LAST:event_Kupit3ButtonActionPerformed
 
     private void Kupit11ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit11ButtonActionPerformed
@@ -813,6 +903,26 @@ public class Produkty extends javax.swing.JFrame {
 
     private void Kupit4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit4ButtonActionPerformed
         
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Pecena slaninka sendvic");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                
     }//GEN-LAST:event_Kupit4ButtonActionPerformed
 
     private void domovButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_domovButtonActionPerformed
@@ -863,17 +973,19 @@ public class Produkty extends javax.swing.JFrame {
 
     private void Kupit1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit1ButtonActionPerformed
         
-        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet) values (?)"; //php kod pre databazu
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
         
         try{ 
 
                 pst = connO.prepareStatement(sql1);              //
                 pst.setString(1, "Kuracia bagetka");             //
-                     //                                                            //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
                 pst.close();     
-                rs.close();
             
         }
         catch(Exception e)
@@ -882,6 +994,150 @@ public class Produkty extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_Kupit1ButtonActionPerformed
+
+    private void Kupit5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit5ButtonActionPerformed
+        
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Bavorska bagetka");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_Kupit5ButtonActionPerformed
+
+    private void Kupit7ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit7ButtonActionPerformed
+        
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Raznici bagetka");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_Kupit7ButtonActionPerformed
+
+    private void Kupit8ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit8ButtonActionPerformed
+        
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Parizska bagetka");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_Kupit8ButtonActionPerformed
+
+    private void Kupit9ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit9ButtonActionPerformed
+        
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Tuniakovy sendvic");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_Kupit9ButtonActionPerformed
+
+    private void Kupit10ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit10ButtonActionPerformed
+        
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Sunkovy sendvic");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_Kupit10ButtonActionPerformed
+
+    private void Kupit12ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Kupit12ButtonActionPerformed
+        
+        String sql1 = "insert into kosik (NazovProduktu, IDProduktu, CenaProduktu, Pocet, CenaCelkovo) values (?,?,?,?,?)"; //php kod pre databazu
+        
+        try{ 
+
+                pst = connO.prepareStatement(sql1);              //
+                pst.setString(1, "Zaudena sunka sendvic");             //
+                pst.setString(2, "2");
+                pst.setString(3, "2");
+                pst.setString(4, "2");
+                pst.setString(5, "0");                                                            //
+                pst.execute();                                               //
+                JOptionPane.showMessageDialog(null, "produkt bol vlozený do kosika");   //
+                pst.close();     
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+                // TODO add your handling code here:
+    }//GEN-LAST:event_Kupit12ButtonActionPerformed
 
     /**
      * @param args the command line arguments
