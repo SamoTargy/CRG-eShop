@@ -301,11 +301,11 @@ public class Kosik extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Názov produkt", "Id produktu", "Cena Produktu", "Počet", "Cena celkovo"
+                "Názov produkt", "Id produktu", "Cena Produktu", "Počet"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -313,13 +313,6 @@ public class Kosik extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(TabulkaProduktovTable);
-        if (TabulkaProduktovTable.getColumnModel().getColumnCount() > 0) {
-            TabulkaProduktovTable.getColumnModel().getColumn(0).setHeaderValue("Názov produkt");
-            TabulkaProduktovTable.getColumnModel().getColumn(1).setHeaderValue("Id produktu");
-            TabulkaProduktovTable.getColumnModel().getColumn(2).setHeaderValue("Cena Produktu");
-            TabulkaProduktovTable.getColumnModel().getColumn(3).setHeaderValue("Počet");
-            TabulkaProduktovTable.getColumnModel().getColumn(4).setHeaderValue("Cena celkovo");
-        }
         TabulkaProduktovTable.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout PanellSKosikomPanelLayout = new javax.swing.GroupLayout(PanellSKosikomPanel);
@@ -510,9 +503,11 @@ public class Kosik extends javax.swing.JFrame {
 
     private void PokracovatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PokracovatButtonActionPerformed
             
+            String sql1 = "select * from kosik"; //php kod pre databazu
             String sql2 = "TRUNCATE TABLE `kosik`;"; //php kod pre databazu
             String sql5 = "select sum(CenaProduktu) from kosik"; //php kod pre databazu
             String sql6 = "insert into zisky (zisk) values (?)";
+            String sql7 = "insert into objednavky2 (NazovProduktu, IDProduktu, CenaProduktu, Pocet, AdresaDodania, DodatocneInfo) values (?,?,?,?,?,?)";
         
             try{ 
 
@@ -536,15 +531,6 @@ public class Kosik extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, e);
             }
             
-        try{ 
-            pst = connO.prepareStatement(sql2);     
-            pst.executeUpdate(sql2);
-            pst.close();                              //vysypanie tabulky
-        }                                             
-        catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
         
         int odpoved = JOptionPane.showConfirmDialog(this,"Ste si istýže chcete dokončiť objednávku?", "Dokončiť",        //message box
             JOptionPane.YES_NO_OPTION, 
@@ -557,6 +543,16 @@ public class Kosik extends javax.swing.JFrame {
                 JOptionPane.INFORMATION_MESSAGE);
         }
             
+            
+        try{ 
+            pst = connO.prepareStatement(sql2);     
+            pst.executeUpdate(sql2);
+            pst.close();                              //vysypanie tabulky
+        }                                             
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_PokracovatButtonActionPerformed
 
     private void PocetProduktovTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PocetProduktovTextFieldActionPerformed
