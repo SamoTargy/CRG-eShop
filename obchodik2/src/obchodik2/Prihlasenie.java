@@ -21,7 +21,8 @@ public class Prihlasenie extends javax.swing.JFrame {
         initComponents();
         connO = obchodik2connect.ConnectDb();  //makro na prepojenie s databazovS
     }
-
+    
+        
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -187,27 +188,41 @@ public class Prihlasenie extends javax.swing.JFrame {
 
         
         String sql1 = "select * from ucty where Meno=? and Heslo=?";         //
-        String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    // php kod pre databazu
+        String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    // php kod pre databazu  
+        String sql3 = "update aktulanyucet set Meno=?, Priezvisko=?, PrihlasMeno=?, Heslo=?";   //    
         
         try {
             pst = connO.prepareStatement(sql1);               // vkladanie php kodu do databazy
-            pst.setString(1, MenoTextField.getText());        // nacitanie a kontorla mena a heslo (admin
+            pst.setString(1, MenoTextField.getText());        // nacitanie a kontorla mena a heslo
             pst.setString(2, HesloPasswordField.getText());   //
             rs = pst.executeQuery();
             
             if(rs.next()){
-  
-                pst = connO.prepareStatement(sql1);             // vkladanie php kodu do databazy
-                pst.setString(1, MenoTextField.getText());      // nacitanie a kontorla mena a heslo (admin
-                pst.setString(2, HesloPasswordField.getText()); //
-                rs = pst.executeQuery();                 
-                rs.close();
-                pst.close();
-                    
                 
-            Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
-            Domov.show(); // Zobrazí Jframe(Domov)
-            dispose(); // Zatvoí povodný Jframe
+                pst = connO.prepareStatement(sql1);                         //
+                pst.setString(1, MenoTextField.getText());                  // nacitanie a kontorla mena a heslo
+                pst.setString(2, HesloPasswordField.getText());             //
+                pst.execute();                                              //
+                
+                String Meno = rs.getString("Meno");                         //
+                String Priezvisko = rs.getString("Priezvisko");             //vyberanie dat do databazy a zapis do stringu
+                String PrihlasMeno = rs.getString("PrihlasMeno");           //  
+                String Heslo = rs.getString("Heslo");                       //
+                pst.execute();   
+                
+                pst = connO.prepareStatement(sql3);                          //
+                pst.setString(1, Meno);                                      //
+                pst.setString(2, Priezvisko);                                //
+                pst.setString(3, PrihlasMeno);                               // vkladanie dat do databazy
+                pst.setString(4, Heslo);                                     //
+                                                                             //
+                pst.execute();                                               //
+                rs.close();                                                  //
+                pst.close();                                                 //
+                
+                Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
+                Domov.show(); // Zobrazí Jframe(Domov)
+                dispose(); // Zatvoí povodný Jframe
             
             }
             else{
@@ -220,9 +235,9 @@ public class Prihlasenie extends javax.swing.JFrame {
                     rs.close();
                     pst.close();
 
-                Statistiky Statistiky = new Statistiky(); // Zadefinuje Jframe(Statistiky)
-                Statistiky.show(); // Zobrazí Jframe(Statistiky)
-                dispose(); // Zatvoí povodný Jframe                
+                    Statistiky Statistiky = new Statistiky(); // Zadefinuje Jframe(Statistiky)
+                    Statistiky.show(); // Zobrazí Jframe(Statistiky)
+                    dispose(); // Zatvoí povodný Jframe                
 
                 }
                 else{

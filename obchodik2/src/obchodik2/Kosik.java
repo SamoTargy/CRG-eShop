@@ -520,14 +520,16 @@ public class Kosik extends javax.swing.JFrame {
                 rs = pst.executeQuery();
                 rs.next();                              //nacita zisky z tabulky
                 int count = rs.getInt(1);
-                String Pocet = String.valueOf(count); 
                 
-                
-                pst = connO.prepareStatement(sql6);  
-                pst.setString(1, Pocet);              //zapise zisky do databazy zisky                                                                             //
-                pst.execute(); 
-                rs.close();
-                pst.close();
+                if(count !=0 ){                            //aby nezapisovalo nulove zisky
+                    String Pocet = String.valueOf(count);  //zmeni int na string
+                    
+                    pst = connO.prepareStatement(sql6);  
+                    pst.setString(1, Pocet);               //zapise zisky do databazy zisky                                                                             //
+                    pst.execute(); 
+                    rs.close();
+                    pst.close();
+                }
             }
             catch(Exception e)
             {
@@ -542,6 +544,17 @@ public class Kosik extends javax.swing.JFrame {
         catch(Exception e)
         {
             JOptionPane.showMessageDialog(null, e);
+        }
+        
+        int odpoved = JOptionPane.showConfirmDialog(this,"Ste si istýže chcete dokončiť objednávku?", "Dokončiť",        //message box
+            JOptionPane.YES_NO_OPTION, 
+            JOptionPane.QUESTION_MESSAGE);
+        
+        if(odpoved == JOptionPane.YES_OPTION){
+                JOptionPane.showMessageDialog(this,                             //message box ďakujeme
+                "Ďakujeme za váš nákup",
+                "Ďakujeme",
+                JOptionPane.INFORMATION_MESSAGE);
         }
             
     }//GEN-LAST:event_PokracovatButtonActionPerformed

@@ -16,12 +16,31 @@ public class Ucet extends javax.swing.JFrame {
     ResultSet rs;            //makará pre databazu
     PreparedStatement pst;   //
     
+        
     public Ucet() {
         initComponents();
         connO = obchodik2connect.ConnectDb();  //makro na prepojenie s databazovS
         
         ImageIcon imagePerson = new ImageIcon("img/person.png");//
         PersonLabel.setIcon(imagePerson); //
+        
+        String sql1 = "select * from aktulanyucet"; //php kod pre databazu
+        
+            try{ 
+
+                pst = connO.prepareStatement(sql1);     
+                rs = pst.executeQuery();
+                rs.next();
+                MenoTextField.setText(rs.getString(1));
+                PriezviskoTextField.setText(rs.getString(2));
+                PrihlasovacieMenoTextField.setText(rs.getString(3));        //nacita udaje o ucte
+                HesloTextField.setText(rs.getString(4));
+                
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -434,7 +453,66 @@ public class Ucet extends javax.swing.JFrame {
     }//GEN-LAST:event_domovButtonActionPerformed
 
     private void ZmenitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ZmenitButtonActionPerformed
-        // TODO add your handling code here:
+                
+            String sql1 = "select * from aktulanyucet"; //php kod pre databazu
+            String sql2 = "update aktulanyucet set Meno=?, Priezvisko=?, PrihlasMeno=?, Heslo=? where PrihlasMeno=?"; //php kod pre databazu
+            String sql3 = "update ucty set Meno=?, Priezvisko=?, PrihlasMeno=?, Heslo=? where PrihlasMeno=?"; //php kod pre databazu
+        
+            try{ 
+
+                pst = connO.prepareStatement(sql2);                         //
+                pst.setString(1, MenoTextField.getText());                  //
+                pst.setString(2, PriezviskoTextField.getText());            //
+                pst.setString(3, PrihlasovacieMenoTextField.getText());     // vkladanie dat do databazy aktualnyucet
+                pst.setString(4, HesloTextField.getText());                 //
+                pst.setString(5, PrihlasovacieMenoTextField.getText());     //
+                                                                            //
+                pst.execute();                                              //
+                pst.close();                                                //
+                
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
+            
+            
+            
+            try{ 
+
+                pst = connO.prepareStatement(sql3);                         //
+                pst.setString(1, MenoTextField.getText());                  //
+                pst.setString(2, PriezviskoTextField.getText());            //
+                pst.setString(3, PrihlasovacieMenoTextField.getText());     // vkladanie dat do databazy ucty
+                pst.setString(4, HesloTextField.getText());                 //
+                pst.setString(5, PrihlasovacieMenoTextField.getText());     //
+                                                                            //
+                pst.execute();                                              //
+                pst.close();                                                //
+                
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
+            
+            
+            
+            try{ 
+
+                pst = connO.prepareStatement(sql1);     
+                rs = pst.executeQuery();
+                rs.next();
+                MenoTextField.setText(rs.getString(1));
+                PriezviskoTextField.setText(rs.getString(2));
+                PrihlasovacieMenoTextField.setText(rs.getString(3));        //nacita udaje o ucte
+                HesloTextField.setText(rs.getString(4));
+                
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e);
+            }
     }//GEN-LAST:event_ZmenitButtonActionPerformed
 
     private void PriezviskoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PriezviskoTextFieldActionPerformed
