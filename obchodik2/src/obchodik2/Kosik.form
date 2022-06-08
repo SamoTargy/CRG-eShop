@@ -455,38 +455,32 @@
                     <Component class="javax.swing.JTable" name="TabulkaProduktovTable">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="5" rowCount="0">
+                          <Table columnCount="4" rowCount="0">
                             <Column editable="false" title="N&#xe1;zov produkt" type="java.lang.Object"/>
                             <Column editable="false" title="Id produktu" type="java.lang.Object"/>
                             <Column editable="false" title="Cena Produktu" type="java.lang.Object"/>
                             <Column editable="false" title="Po&#x10d;et" type="java.lang.Object"/>
-                            <Column editable="false" title="Cena celkovo" type="java.lang.Object"/>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                           <TableColumnModel selectionModel="0">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title value="N&#xe1;zov produkt"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title value="Id produktu"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title value="Cena Produktu"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title value="Po&#x10d;et"/>
-                              <Editor/>
-                              <Renderer/>
-                            </Column>
-                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                              <Title value="Cena celkovo"/>
+                              <Title/>
                               <Editor/>
                               <Renderer/>
                             </Column>

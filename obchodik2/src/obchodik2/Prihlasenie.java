@@ -68,7 +68,7 @@ public class Prihlasenie extends javax.swing.JFrame {
         );
 
         MenoLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
-        MenoLabel.setText("Prihlas. Meno:");
+        MenoLabel.setText("Meno:");
 
         HesloLabel.setFont(new java.awt.Font("Segoe UI Black", 0, 15)); // NOI18N
         HesloLabel.setText("Heslo:");
@@ -289,7 +289,7 @@ public class Prihlasenie extends javax.swing.JFrame {
 
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
 
-            String sql1 = "select * from ucty where PrihlasMeno=? and Heslo=?";                     //
+            String sql1 = "select * from ucty where Meno=? and Heslo=?";                            //
             String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";                       // php kod pre databazu  
             String sql3 = "update aktulanyucet set Meno=?, Priezvisko=?, PrihlasMeno=?, Heslo=?";   //    
 
