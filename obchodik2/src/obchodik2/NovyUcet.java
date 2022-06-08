@@ -222,6 +222,10 @@ public class NovyUcet extends javax.swing.JFrame {
                 pst.execute();                                               //
                 JOptionPane.showMessageDialog(null, "Ucet bol vytvorený");   //
                 pst.close();                                                 //
+                
+                Prihlasenie Prihlasenie = new Prihlasenie();                 // Zadefinuje Jframe(Domov)
+                Prihlasenie.show();                                          // Zobrazí Jframe(Domov)
+                dispose();                                                   // Zatvoí povodný Jframe
             }
             
         }catch(Exception e){

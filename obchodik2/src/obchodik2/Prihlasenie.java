@@ -289,13 +289,13 @@ public class Prihlasenie extends javax.swing.JFrame {
 
         if(evt.getKeyCode() == KeyEvent.VK_ENTER){
 
-            String sql1 = "select * from ucty where Meno=? and Heslo=?";         //
-            String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    // php kod pre databazu  
+            String sql1 = "select * from ucty where PrihlasMeno=? and Heslo=?";                     //
+            String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";                       // php kod pre databazu  
             String sql3 = "update aktulanyucet set Meno=?, Priezvisko=?, PrihlasMeno=?, Heslo=?";   //    
 
             try {
                 pst = connO.prepareStatement(sql1);               // vkladanie php kodu do databazy
-                pst.setString(1, MenoTextField.getText());        // nacitanie a kontorla mena a heslo
+                pst.setString(1, MenoTextField.getText());        // nacitanie a kontorla prihlasovacieho mena a heslo
                 pst.setString(2, HesloPasswordField.getText());   //
                 rs = pst.executeQuery();
 
@@ -317,7 +317,7 @@ public class Prihlasenie extends javax.swing.JFrame {
                     pst.setString(2, Priezvisko);                                //
                     pst.setString(3, PrihlasMeno);                               // vkladanie dat do databazy
                     pst.setString(4, Heslo);                                     //
-                                                                                 //
+
                     pst.execute();                                               //
                     rs.close();                                                  //
                     pst.close();                                                 //
