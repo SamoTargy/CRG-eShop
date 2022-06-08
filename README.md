@@ -12,9 +12,9 @@
 8.	Pripojenie sa k online databaze
 9.	Nastavenie databazy
 10.	Pripojenie účtov na databázu
-11.	Vytvorenie bločika 
-12.	Pripojenie bločika na databázu
-13.	Nastavenie bločika
+11.	učty + databaza
+12.	registracia cez databazu
+13.	košik + databaza
 14.	Nasledná optimalizácia kódu
 
 isto sa ešte niečo najde
