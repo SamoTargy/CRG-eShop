@@ -1,6 +1,7 @@
 package obchodik2;
 
 
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -77,6 +78,11 @@ public class Prihlasenie extends javax.swing.JFrame {
                 HesloPasswordFieldActionPerformed(evt);
             }
         });
+        HesloPasswordField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                HesloPasswordFieldKeyPressed(evt);
+            }
+        });
 
         NemamUcetButton.setBackground(new java.awt.Color(30, 144, 255));
         NemamUcetButton.setText("Nemám účet");
@@ -102,6 +108,11 @@ public class Prihlasenie extends javax.swing.JFrame {
         PrihlasitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PrihlasitButtonActionPerformed(evt);
+            }
+        });
+        PrihlasitButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                PrihlasitButtonKeyPressed(evt);
             }
         });
 
@@ -185,7 +196,6 @@ public class Prihlasenie extends javax.swing.JFrame {
     }//GEN-LAST:event_HesloPasswordFieldActionPerformed
 
     private void PrihlasitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrihlasitButtonActionPerformed
-
         
         String sql1 = "select * from ucty where Meno=? and Heslo=?";         //
         String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    // php kod pre databazu  
@@ -270,6 +280,86 @@ public class Prihlasenie extends javax.swing.JFrame {
             dispose(); // Zatvoí povodný Jframe
             
     }//GEN-LAST:event_NemamUcetButtonActionPerformed
+
+    private void PrihlasitButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PrihlasitButtonKeyPressed
+
+    }//GEN-LAST:event_PrihlasitButtonKeyPressed
+
+    private void HesloPasswordFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_HesloPasswordFieldKeyPressed
+
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+
+            String sql1 = "select * from ucty where Meno=? and Heslo=?";         //
+            String sql2 = "select * from uctyadmin where Meno=? and Heslo=?";    // php kod pre databazu  
+            String sql3 = "update aktulanyucet set Meno=?, Priezvisko=?, PrihlasMeno=?, Heslo=?";   //    
+
+            try {
+                pst = connO.prepareStatement(sql1);               // vkladanie php kodu do databazy
+                pst.setString(1, MenoTextField.getText());        // nacitanie a kontorla mena a heslo
+                pst.setString(2, HesloPasswordField.getText());   //
+                rs = pst.executeQuery();
+
+                if(rs.next()){
+
+                    pst = connO.prepareStatement(sql1);                         //
+                    pst.setString(1, MenoTextField.getText());                  // nacitanie a kontorla mena a heslo
+                    pst.setString(2, HesloPasswordField.getText());             //
+                    pst.execute();                                              //
+
+                    String Meno = rs.getString("Meno");                         //
+                    String Priezvisko = rs.getString("Priezvisko");             //vyberanie dat do databazy a zapis do stringu
+                    String PrihlasMeno = rs.getString("PrihlasMeno");           //  
+                    String Heslo = rs.getString("Heslo");                       //
+                    pst.execute();   
+
+                    pst = connO.prepareStatement(sql3);                          //
+                    pst.setString(1, Meno);                                      //
+                    pst.setString(2, Priezvisko);                                //
+                    pst.setString(3, PrihlasMeno);                               // vkladanie dat do databazy
+                    pst.setString(4, Heslo);                                     //
+                                                                                 //
+                    pst.execute();                                               //
+                    rs.close();                                                  //
+                    pst.close();                                                 //
+
+                    Domov Domov = new Domov(); // Zadefinuje Jframe(Domov)
+                    Domov.show(); // Zobrazí Jframe(Domov)
+                    dispose(); // Zatvoí povodný Jframe
+
+                }
+                else{
+                    pst = connO.prepareStatement(sql2);             // vkladanie php kodu do databazy
+                    pst.setString(1, MenoTextField.getText());      // nacitanie a kontorla mena a heslo (admin
+                    pst.setString(2, HesloPasswordField.getText()); //
+                    rs = pst.executeQuery();            
+
+                    if(rs.next()){
+                        rs.close();
+                        pst.close();
+
+                        Statistiky Statistiky = new Statistiky(); // Zadefinuje Jframe(Statistiky)
+                        Statistiky.show(); // Zobrazí Jframe(Statistiky)
+                        dispose(); // Zatvoí povodný Jframe                
+
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(this,"Neplatné alebo Zle zadané prihlasovacie údaje.","LOGIN_ERROR",JOptionPane.ERROR_MESSAGE); //Error message
+                    }
+                }
+
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+            }finally{
+                try{
+                rs.close();
+                pst.close();
+            }catch(Exception e){
+            }
+            }
+
+        }
+
+    }//GEN-LAST:event_HesloPasswordFieldKeyPressed
 
     
 
